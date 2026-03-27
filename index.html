@@ -39,14 +39,14 @@
             <li><strong>Camera Access:</strong>
                 <ul>
                     <li><strong>Why we need it:</strong> The App's core functions are scanning barcodes and recognizing text from ingredient lists. This requires access to your device's camera.</li>
-                    <li><strong>How it's used:</strong> The camera is only active when you are on the "Scan Barcode" or "Take Photo" screens. The live camera feed is processed in real-time on your device by Google's ML Kit service. We do not store the camera feed.</li>
+                    <li><strong>How it's used:</strong> The camera is only active when you are on the "Scan Barcode" or "Take Photo" screens. The live camera feed is processed in real-time on your device by Google's ML Kit service on Android or Apple's Vision framework on iOS. We do not store the camera feed.</li>
                     <li><strong>Image Captures:</strong> When you use the "Take Photo" feature, the photo is processed on-device for text recognition. The photo is not saved unless you explicitly do so, and it is not transmitted off your device.</li>
                 </ul>
             </li>
             <li><strong>Scan History & Translation Memory:</strong>
                 <ul>
                     <li><strong>What it is:</strong> The App saves a history of scanned products and a "Translation Memory" (cached translations) to speed up the app and save data.</li>
-                    <li><strong>How it's stored:</strong> Stored exclusively on your device using Android's internal storage (SharedPreferences).</li>
+                    <li><strong>How it's stored:</strong> Stored exclusively on your device using the device's internal storage.</li>
                     <li><strong>Your Control:</strong> You can disable history saving, delete individual items, or wipe your entire history at any time in the settings.</li>
                 </ul>
             </li>
@@ -57,7 +57,13 @@
         <p>To provide product information and translation, the App communicates with external services. We do not upload personal info beyond the data required for these features.</p>
         <ul>
             <li><strong>Product Barcodes:</strong> Scanned barcodes are sent to <strong>Open Food Facts</strong> and <strong>FoodRepo.org</strong> to retrieve product data.</li>
-            <li><strong>Ingredient Text for Translation:</strong> Text is shared with <strong>Google ML Kit</strong>, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong> based on your choices. This is only used to translate label text for your viewing.</li>
+            <li><strong>Ingredient Text for Translation:</strong> 
+                <ul>
+                    <li><strong>Android:</strong> Text may be shared with <strong>Google ML Kit</strong>, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong> based on your choices.</li>
+                    <li><strong>iOS:</strong> Text may be processed using <strong>Apple Translate</strong>, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong>.</li>
+                </ul>
+                This is only used to translate label text for your viewing.
+            </li>
             <li><strong>Reporting a Missing Product:</strong> If you report a product, the barcode is sent to Open Food Facts to help improve their community database.</li>
         </ul>
     </div>
@@ -66,7 +72,8 @@
         <h2>3. Summary of Third-Party Services</h2>
         <p>Our App utilizes the following third-party libraries and services:</p>
         <ul>
-            <li><strong>Google ML Kit:</strong> Barcode scanning, OCR, and language identification.</li>
+            <li><strong>Google ML Kit (Android):</strong> Barcode scanning, OCR, and language identification.</li>
+            <li><strong>Apple Translate (iOS):</strong> Ingredient translation services.</li>
             <li><strong>Open Food Facts & FoodRepo.org:</strong> Retrieving product data.</li>
             <li><strong>LibreTranslate & Lingva Translate:</strong> Online translation services.</li>
             <li><strong>Coil:</strong> Image loading library.</li>

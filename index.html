@@ -3,236 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LB Food Scanner</title>
+    <title>Privacy Policy - LB: Universal Scanner</title>
+    <meta name="description" content="Privacy Policy and Terms of Use for LB: Universal Scanner.">
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background: #fff; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #000; }
-        h2 { margin-top: 30px; color: #444; border-left: 4px solid #6200EE; padding-left: 15px; }
-        h3 { margin-top: 20px; color: #555; }
-        .last-updated { color: #666; font-style: italic; margin-bottom: 30px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        a { color: #6200EE; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .section { margin-bottom: 40px; }
-        strong { color: #000; }
+        :root {
+            --accent: #0B00FF;
+            --accent-soft: #EEF1FF;
+            --text: #1f2933;
+            --muted: #657080;
+            --border: #e5e7eb;
+            --surface: #ffffff;
+            --surface-soft: #f8fafc;
+            --heading: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--surface-soft);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 32px 18px 56px;
+        }
+
+        .policy-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        header {
+            padding: 36px 34px 28px;
+            background: linear-gradient(180deg, #ffffff 0%, var(--accent-soft) 100%);
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--heading);
+            font-size: clamp(2rem, 5vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: 0;
+        }
+
+        .subtitle {
+            margin: 14px 0 0;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        .last-updated {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #ffffff;
+            color: var(--muted);
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        main {
+            padding: 30px 34px 36px;
+        }
+
+        .intro {
+            margin-top: 0;
+            font-size: 1.05rem;
+        }
+
+        h2 {
+            margin: 34px 0 12px;
+            padding-left: 14px;
+            border-left: 4px solid var(--accent);
+            color: var(--heading);
+            font-size: 1.35rem;
+            line-height: 1.3;
+        }
+
+        h3 {
+            margin: 24px 0 8px;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        ul {
+            margin: 10px 0 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        li ul {
+            margin-top: 8px;
+        }
+
+        strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            padding-bottom: 2px;
+        }
+
+        .notice {
+            margin-top: 34px;
+            padding: 20px;
+            border-radius: 12px;
+            background: var(--accent-soft);
+            border: 1px solid #d8ddff;
+        }
+
+        .contact {
+            margin-top: 34px;
+            padding: 22px;
+            border-radius: 12px;
+            background: #f8fafc;
+            border: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 16px 12px 40px;
+            }
+
+            header,
+            main {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .policy-card {
+                border-radius: 10px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+            }
+
+            .page {
+                max-width: none;
+                padding: 0;
+            }
+
+            .policy-card {
+                box-shadow: none;
+                border: none;
+            }
+
+            header {
+                background: #ffffff;
+            }
+
+            a {
+                color: #000000;
+                text-decoration: underline;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h1>Privacy Policy for LB Food Scanner</h1>
-    <p class="last-updated">Last Updated: April 22, 2026</p>
+    <div class="page">
+        <article class="policy-card">
+            <header>
+                <h1>Privacy Policy for LB: Universal Scanner</h1>
+                <p class="subtitle">Privacy Policy and basic Terms of Use for LB: Universal Scanner.</p>
+                <p class="last-updated">Last Updated: April 27, 2026</p>
+            </header>
 
-    <p>Thank you for using LB Food Scanner ("the App"). This Privacy Policy explains how the App handles information, what third-party services it may use, and what choices you have. This page is intended to apply globally to the Android and iPhone versions of the App, depending on platform, app version, and enabled settings. It also includes basic terms of use.</p>
+            <main>
+                <p class="intro">Thank you for using LB: Universal Scanner ("the App"). This Privacy Policy explains how the App handles information, what third-party services it may use, and what choices you have. This page is intended to apply globally to the Android and iPhone versions of the App, depending on platform, app version, and enabled settings. It also includes basic terms of use.</p>
 
-    <div class="section">
-        <h2>1. The Core Principle</h2>
-        <p>The App is built to be privacy-friendly.</p>
-        <ul>
-            <li><strong>No account is required</strong> to use the App.</li>
-            <li><strong>No third-party ads are shown</strong> in the App.</li>
-            <li>The majority of your data, including scan history, saved product notes, allergen preferences, digestive-profile preferences, scan mode, enabled databases, and most settings, is stored <strong>only on your device</strong>.</li>
-            <li>Some features depend on third-party services such as product databases, translation services, cosmetic/chemical reference sources, donation pages, and your device’s built-in speech services. Those services may receive limited data needed to provide the feature you choose to use.</li>
-        </ul>
-    </div>
+                <div class="section">
+                    <h2>1. The Core Principle</h2>
+                    <p>The App is built to be privacy-friendly.</p>
+                    <ul>
+                        <li><strong>No account is required</strong> to use the App.</li>
+                        <li><strong>No third-party ads are shown</strong> in the App.</li>
+                        <li>The majority of your data, including scan history, saved product notes, allergen preferences, digestive-profile preferences, scan mode, selected translation language, enabled databases, and most settings, is stored <strong>only on your device</strong>.</li>
+                        <li>Some features depend on third-party services such as product databases, translation services, cosmetic/chemical reference sources, donation pages, and your device's built-in speech services. Those services may receive limited data needed to provide the feature you choose to use.</li>
+                    </ul>
+                </div>
 
-    <div class="section">
-        <h2>2. Information We Process and How We Use It</h2>
-        <p>To provide its features, the App needs to access or process certain information.</p>
+                <div class="section">
+                    <h2>2. Information We Process and How We Use It</h2>
+                    <p>To provide its features, the App needs to access or process certain information.</p>
 
-        <h3>a. Information processed on your device</h3>
-        <p>This information is primarily handled locally on your device.</p>
-        <ul>
-            <li><strong>Camera Access:</strong>
-                <ul>
-                    <li><strong>Why we need it:</strong> The App supports barcode scanning and manual product scanning from photos, including food ingredient lists, pet food ingredient lists, cosmetic INCI lists, and cleaning product labels.</li>
-                    <li><strong>How it is used:</strong> The camera is only used when you actively scan a product or take a photo for text recognition.</li>
-                    <li><strong>On-device processing:</strong> Depending on your platform and app version, barcode scanning, text recognition, language identification, image crop assistance, and related features may use <strong>Google ML Kit</strong> on Android and/or <strong>Apple system frameworks</strong> and translation-related system services on iPhone.</li>
-                    <li><strong>Temporary files:</strong> Temporary image files, crop data, or cache files may be created during scan processing or image handling on your device.</li>
-                </ul>
-            </li>
-            <li><strong>Scan History:</strong>
-                <ul>
-                    <li><strong>What it is:</strong> The App can save recently scanned products so you can view them again later.</li>
-                    <li><strong>How it is stored:</strong> Stored only on your device’s app storage.</li>
-                    <li><strong>Your control:</strong> You can disable history saving or clear saved history in the App settings.</li>
-                </ul>
-            </li>
-            <li><strong>Per-Product Notes:</strong>
-                <ul>
-                    <li><strong>What it is:</strong> You can save your own note for a scanned product, for example to remember packaging details, missing allergen information, digestive triggers, sensitivities, or personal reminders.</li>
-                    <li><strong>How it is stored:</strong> Notes are saved locally on your device only, usually per barcode or per scanned product key.</li>
-                    <li><strong>Who can see it:</strong> Only the user of that device/app install. Notes are not shared with other users.</li>
-                </ul>
-            </li>
-            <li><strong>Translation Cache:</strong>
-                <ul>
-                    <li><strong>What it is:</strong> The App may store cached translations locally to avoid repeating translation requests and to improve speed.</li>
-                    <li><strong>How it is stored:</strong> Stored only on your device.</li>
-                </ul>
-            </li>
-            <li><strong>Product Images and Cached Media:</strong>
-                <ul>
-                    <li>If a product database provides an image URL, the App may load that image and cache it locally on your device for display performance.</li>
-                </ul>
-            </li>
-            <li><strong>Preferences and Settings:</strong>
-                <ul>
-                    <li>Examples include selected allergens, digestive-profile settings (such as IBS / SIBO, fructose, polyol, onion / garlic, inulin / FOS, custom digestive triggers, and Biofarm / Cleaner Label preferences), nutritional alert toggles, preferred translation engine, voice mode, speech rate and pitch, dark mode, selected scan mode, and enabled product databases.</li>
-                    <li>These are stored locally on your device.</li>
-                </ul>
-            </li>
-            <li><strong>Voice Assistant / Text-to-Speech:</strong>
-                <ul>
-                    <li>If you enable Voice Assistant Mode, the App sends text to your device’s configured speech engine so results can be read aloud.</li>
-                    <li>Depending on your platform and version, this may use <strong>Android Text-to-Speech</strong>, <strong>Apple speech / voice services</strong>, or another installed device speech engine.</li>
-                    <li>Your device’s speech engine may operate under its own privacy policy and terms.</li>
-                </ul>
-            </li>
-        </ul>
+                    <h3>a. Information processed on your device</h3>
+                    <p>This information is primarily handled locally on your device.</p>
 
-        <h3>b. Information shared with third-party services</h3>
-        <p>Some features require limited data to be sent to third-party services. We do not require an account from you to use these features.</p>
-        <ul>
-            <li><strong>Human food barcode lookups:</strong>
-                <ul>
-                    <li>When you scan a human food barcode, the barcode may be sent to <strong>Open Food Facts</strong> and <strong>Pro Open Food Facts</strong> to retrieve product information.</li>
-                    <li>If you manually enable the optional legacy source in Settings, the barcode may also be sent to <strong>FoodRepo.org</strong>.</li>
-                </ul>
-            </li>
-            <li><strong>Pet food barcode lookups:</strong>
-                <ul>
-                    <li>When you scan a pet food barcode, the barcode may be sent to <strong>Open Pet Food Facts</strong> to retrieve product information.</li>
-                </ul>
-            </li>
-            <li><strong>Cosmetic barcode lookups:</strong>
-                <ul>
-                    <li>When you scan a cosmetic barcode, the barcode may be sent to <strong>Open Beauty Facts</strong> to retrieve product information.</li>
-                </ul>
-            </li>
-            <li><strong>Cleaning product barcode lookups:</strong>
-                <ul>
-                    <li>When you scan a cleaning product barcode, the barcode may be sent to <strong>Open Products Facts</strong> to retrieve product information.</li>
-                </ul>
-            </li>
-            <li><strong>Translation services:</strong>
-                <ul>
-                    <li>Depending on your platform, app version, and chosen settings, translation may use <strong>Google ML Kit</strong>, <strong>Apple Translate</strong> or related Apple system translation services, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong>.</li>
-                    <li>If you choose an online translator, the text you choose to translate may be sent to that selected third-party service.</li>
-                    <li>Some translation models or language packages may be downloaded to your device when needed.</li>
-                </ul>
-            </li>
-            <li><strong>Cosmetic ingredient research features:</strong>
-                <ul>
-                    <li>If you tap a cosmetic ingredient card to load extra reference data, the ingredient name may be sent to <strong>PubChem</strong> to retrieve chemical reference information.</li>
-                    <li>If you choose to open <strong>CosIng</strong>, <strong>ECHA</strong>, or <strong>EWG Skin Deep</strong>, the App may open those services in your browser. Your use of those sites is governed by their own terms and privacy policies.</li>
-                </ul>
-            </li>
-            <li><strong>Source product pages and contribution websites:</strong>
-                <ul>
-                    <li>If you choose to open a product’s source page or use a "Contribute on Website" option, the App may open an external website in your browser and include the barcode or product code in the destination URL.</li>
-                </ul>
-            </li>
-            <li><strong>Optional donations / support:</strong>
-                <ul>
-                    <li>If you tap the Donate option, the App may open <strong>PayPal</strong> or <strong>Wise</strong> in your browser or app so you can support the creator voluntarily.</li>
-                    <li>Donations are optional and do <strong>not</strong> unlock premium features, faster scans, badges, or digital extras inside the App.</li>
-                </ul>
-            </li>
-            <li><strong>Email contact and support:</strong>
-                <ul>
-                    <li>If you choose to send us an email, your email app/provider will process your email address and message contents in the normal way.</li>
-                    <li>We will receive whatever information you voluntarily include in that email and use it only to respond, investigate the issue, or provide support.</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+                    <ul>
+                        <li><strong>Camera Access:</strong>
+                            <ul>
+                                <li><strong>Why we need it:</strong> The App supports barcode scanning and manual product scanning from photos, including human food ingredient lists, pet food ingredient lists, cosmetic INCI lists, and cleaning product labels.</li>
+                                <li><strong>How it is used:</strong> The camera is only used when you actively scan a product or take a photo for text recognition.</li>
+                                <li><strong>On-device processing:</strong> Depending on your platform and app version, barcode scanning, text recognition, language identification, image crop assistance, and related features may use <strong>Google ML Kit</strong> on Android and/or <strong>Apple system frameworks</strong> and translation-related system services on iPhone.</li>
+                                <li><strong>Temporary files:</strong> Temporary image files, crop data, or cache files may be created during scan processing or image handling on your device.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>3. No Account, No Ads, Optional Support</h2>
-        <ul>
-            <li>The App does <strong>not</strong> require you to create an account.</li>
-            <li>The App does <strong>not</strong> show third-party ads.</li>
-            <li>The App is designed to work without a cloud profile or centralized user account.</li>
-            <li>Optional donations may be offered through external services, but they do not change the App’s core functionality or grant digital benefits.</li>
-        </ul>
-    </div>
+                        <li><strong>Scan History:</strong>
+                            <ul>
+                                <li><strong>What it is:</strong> The App can save recently scanned products so you can view them again later.</li>
+                                <li><strong>How it is stored:</strong> Stored only on your device's app storage.</li>
+                                <li><strong>Your control:</strong> You can disable history saving or clear saved history in the App settings.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>4. Summary of Third-Party Services</h2>
-        <p>The App may use or link to the following third-party tools, services, libraries, and public databases, depending on your platform, app version, and settings:</p>
-        <ul>
-            <li><strong>Google ML Kit:</strong> Barcode scanning, OCR/text recognition, language identification, and translation support on supported Android versions.</li>
-            <li><strong>Apple system frameworks / Apple Translate / Apple speech services:</strong> Supported iPhone scanning, translation, and speech-related features where available.</li>
-            <li><strong>Android Text-to-Speech:</strong> Reads results aloud on supported Android devices when voice features are enabled.</li>
-            <li><strong>Open Food Facts / Pro Open Food Facts:</strong> Human food barcode data.</li>
-            <li><strong>FoodRepo.org:</strong> Optional legacy human food barcode source if enabled by the user.</li>
-            <li><strong>Open Pet Food Facts:</strong> Pet food barcode data.</li>
-            <li><strong>Open Beauty Facts:</strong> Cosmetic barcode data.</li>
-            <li><strong>Open Products Facts:</strong> Cleaning product and non-food product barcode data.</li>
-            <li><strong>LibreTranslate / Lingva Translate:</strong> Optional translation providers selected by the user.</li>
-            <li><strong>PubChem:</strong> Cosmetic ingredient chemical reference lookups.</li>
-            <li><strong>CosIng, ECHA, and EWG Skin Deep:</strong> External research/reference resources that may be opened from the App.</li>
-            <li><strong>PayPal / Wise:</strong> Optional external donation pages if the user chooses to support the App’s creator.</li>
-            <li><strong>Coil:</strong> Image loading and caching library used inside the App.</li>
-        </ul>
-    </div>
+                        <li><strong>Per-Product Notes:</strong>
+                            <ul>
+                                <li><strong>What it is:</strong> You can save your own note for a scanned product, for example to remember packaging details, missing allergen information, digestive triggers, sensitivities, or personal reminders.</li>
+                                <li><strong>How it is stored:</strong> Notes are saved locally on your device only, usually per barcode or per scanned product key.</li>
+                                <li><strong>Who can see it:</strong> Only the user of that device/app install. Notes are not shared with other users.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>5. Important Accuracy, Allergy, Digestive, and Safety Notice</h2>
-        <ul>
-            <li>The App relies in part on third-party and community-maintained product databases. Product information can be <strong>incomplete, outdated, or inaccurate</strong>.</li>
-            <li>A valid real-world product may not yet appear in a free public database, even if its barcode is correct.</li>
-            <li>Allergen, ingredient, digestive-trigger, cosmetic, pet food, or cleaning-product information may be missing or incomplete in online database entries.</li>
-            <li>The App may generate warnings, ingredient insights, translations, voice summaries, digestive-profile alerts, cleaner-label alerts, or note-based reminders, but these are <strong>informational only</strong>.</li>
-            <li><strong>Always check the real product packaging and manufacturer information</strong>, especially for allergies, intolerances, IBS / SIBO / digestive sensitivities, medical conditions, pet safety, chemical exposure concerns, or skin sensitivities.</li>
-            <li>The App does <strong>not</strong> provide medical, nutritional, veterinary, dermatological, toxicological, regulatory, or legal advice.</li>
-            <li>Cosmetic and chemical reference tools such as PubChem, CosIng, ECHA, and EWG are provided for research convenience only and may have their own limitations, notices, and rules.</li>
-        </ul>
-    </div>
+                        <li><strong>Translation Settings and Cache:</strong>
+                            <ul>
+                                <li><strong>What it is:</strong> The App may remember your selected target translation language so future scanned products can be translated more conveniently.</li>
+                                <li><strong>How it is stored:</strong> The selected language and any cached translations are stored locally on your device.</li>
+                                <li><strong>Your control:</strong> You can switch back to Original text or change translation settings inside the App.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>6. Your Rights and Choices</h2>
-        <ul>
-            <li><strong>Camera Permission:</strong> You can deny or revoke camera access at any time in system settings.</li>
-            <li><strong>History Controls:</strong> You can disable history saving and clear saved scan history inside the App.</li>
-            <li><strong>Notes and Preferences:</strong> You can edit or clear your local product notes, allergen settings, digestive profiles, and other settings inside the App.</li>
-            <li><strong>Translation Choice:</strong> You can choose which translation service the App uses when multiple options are offered.</li>
-            <li><strong>Voice Controls:</strong> You can disable voice mode or adjust speech settings at any time.</li>
-            <li><strong>Database Controls:</strong> You can enable or disable certain barcode databases in the App settings.</li>
-            <li><strong>Local Data Removal:</strong> You can remove local App data by clearing App storage or uninstalling the App.</li>
-        </ul>
-    </div>
+                        <li><strong>Product Images and Cached Media:</strong>
+                            <ul>
+                                <li>If a product database provides an image URL, the App may load that image and cache it locally on your device for display performance.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>7. Children’s Privacy</h2>
-        <p>The App is not intended for children under the age of 13, and we do not knowingly seek to collect personal information from children through account creation or similar systems, because the App does not require an account.</p>
-    </div>
+                        <li><strong>Preferences and Settings:</strong>
+                            <ul>
+                                <li>Examples include selected allergens, digestive-profile settings, custom digestive triggers, Biofarm / Cleaner Label preferences, nutritional alert toggles, preferred translation engine, selected target translation language, voice mode, speech rate and pitch, dark mode, selected scan mode, and enabled product databases.</li>
+                                <li>These are stored locally on your device.</li>
+                            </ul>
+                        </li>
 
-    <div class="section">
-        <h2>8. Data Security</h2>
-        <p>Because most App data is stored locally, the security of that data depends largely on your device’s own protections, such as screen lock, device encryption, and system security updates. No method of local storage or internet transmission can be guaranteed to be perfectly secure.</p>
-    </div>
+                        <li><strong>Voice Assistant / Text-to-Speech:</strong>
+                            <ul>
+                                <li>If you enable Voice Assistant Mode, the App sends text to your device's configured speech engine so results can be read aloud.</li>
+                                <li>Depending on your platform and version, this may use <strong>Android Text-to-Speech</strong>, <strong>Apple speech / voice services</strong>, or another installed device speech engine.</li>
+                                <li>Your device's speech engine may operate under its own privacy policy and terms.</li>
+                            </ul>
+                        </li>
+                    </ul>
 
-    <div class="section">
-        <h2>9. Terms of Use</h2>
-        <ul>
-            <li>By using the App, you agree to use it at your own risk.</li>
-            <li>The App is provided on an <strong>“as is”</strong> and <strong>“as available”</strong> basis to the extent permitted by applicable law.</li>
-            <li>We do not guarantee uninterrupted availability, complete accuracy, or fitness for a particular purpose.</li>
-            <li>You are responsible for your own decisions based on the App’s output, and you should independently verify important information from product packaging, manufacturers, veterinarians, doctors, or other qualified professionals where appropriate.</li>
-            <li>Third-party databases, translators, speech engines, donation providers, and external reference sites may change, become unavailable, impose limits, or operate under their own separate legal terms and privacy policies.</li>
-            <li>If you do not agree with these terms, please do not use the App.</li>
-        </ul>
-    </div>
+                    <h3>b. Information shared with third-party services</h3>
+                    <p>Some features require limited data to be sent to third-party services. We do not require an account from you to use these features.</p>
 
-    <div class="section">
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this page from time to time to reflect new App features, platform changes, service changes, or legal requirements. The “Last Updated” date at the top shows the latest revision date.</p>
-    </div>
+                    <ul>
+                        <li><strong>Human food barcode lookups:</strong>
+                            <ul>
+                                <li>When you scan a human food barcode, the barcode may be sent to <strong>Open Food Facts</strong> and <strong>Pro Open Food Facts</strong> to retrieve product information.</li>
+                                <li>If you manually enable the optional legacy source in Settings, the barcode may also be sent to <strong>FoodRepo.org</strong>.</li>
+                            </ul>
+                        </li>
 
-    <div class="section" style="background: #f9f9f9; padding: 20px; border-radius: 8px;">
-        <h2>11. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy or the App, contact us at: <a href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
+                        <li><strong>Pet food barcode lookups:</strong>
+                            <ul>
+                                <li>When you scan a pet food barcode, the barcode may be sent to <strong>Open Pet Food Facts</strong> to retrieve product information.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Cosmetic barcode lookups:</strong>
+                            <ul>
+                                <li>When you scan a cosmetic barcode, the barcode may be sent to <strong>Open Beauty Facts</strong> to retrieve product information.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Cleaning product barcode lookups:</strong>
+                            <ul>
+                                <li>When you scan a cleaning product barcode, the barcode may be sent to <strong>Open Products Facts</strong> to retrieve product information.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Translation services:</strong>
+                            <ul>
+                                <li>Depending on your platform, app version, and chosen settings, translation may use <strong>Google ML Kit</strong>, <strong>Apple Translate</strong> or related Apple system translation services, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong>.</li>
+                                <li>If you choose an online translator, the text you choose to translate may be sent to that selected third-party service.</li>
+                                <li>Some translation models or language packages may be downloaded to your device when needed.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Cosmetic ingredient research features:</strong>
+                            <ul>
+                                <li>If you tap a cosmetic ingredient card to load extra reference data, the ingredient name may be sent to <strong>PubChem</strong> to retrieve chemical reference information.</li>
+                                <li>If you choose to open <strong>CosIng</strong>, <strong>ECHA</strong>, or <strong>EWG Skin Deep</strong>, the App may open those services in your browser. Your use of those sites is governed by their own terms and privacy policies.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Source product pages and contribution websites:</strong>
+                            <ul>
+                                <li>If you choose to open a product's source page or use a "Contribute on Website" option, the App may open an external website in your browser and include the barcode or product code in the destination URL.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Optional donations / support:</strong>
+                            <ul>
+                                <li>If you tap the Donate option, the App may open <strong>PayPal</strong> or <strong>Wise</strong> in your browser or app so you can support the creator voluntarily.</li>
+                                <li>Donations are optional and do <strong>not</strong> unlock premium features, faster scans, badges, or digital extras inside the App.</li>
+                            </ul>
+                        </li>
+
+                        <li><strong>Email contact and support:</strong>
+                            <ul>
+                                <li>If you choose to send us an email, your email app/provider will process your email address and message contents in the normal way.</li>
+                                <li>We will receive whatever information you voluntarily include in that email and use it only to respond, investigate the issue, or provide support.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>3. No Account, No Ads, Optional Support</h2>
+                    <ul>
+                        <li>The App does <strong>not</strong> require you to create an account.</li>
+                        <li>The App does <strong>not</strong> show third-party ads.</li>
+                        <li>The App is designed to work without a cloud profile or centralized user account.</li>
+                        <li>Optional donations may be offered through external services, but they do not change the App's core functionality or grant digital benefits.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>4. Summary of Third-Party Services</h2>
+                    <p>The App may use or link to the following third-party tools, services, libraries, and public databases, depending on your platform, app version, and settings:</p>
+                    <ul>
+                        <li><strong>Google ML Kit:</strong> Barcode scanning, OCR/text recognition, language identification, and translation support on supported Android versions.</li>
+                        <li><strong>Apple system frameworks / Apple Translate / Apple speech services:</strong> Supported iPhone scanning, translation, and speech-related features where available.</li>
+                        <li><strong>Android Text-to-Speech:</strong> Reads results aloud on supported Android devices when voice features are enabled.</li>
+                        <li><strong>Open Food Facts / Pro Open Food Facts:</strong> Human food barcode data.</li>
+                        <li><strong>FoodRepo.org:</strong> Optional legacy human food barcode source if enabled by the user.</li>
+                        <li><strong>Open Pet Food Facts:</strong> Pet food barcode data.</li>
+                        <li><strong>Open Beauty Facts:</strong> Cosmetic barcode data.</li>
+                        <li><strong>Open Products Facts:</strong> Cleaning product and non-food product barcode data.</li>
+                        <li><strong>LibreTranslate / Lingva Translate:</strong> Optional translation providers selected by the user.</li>
+                        <li><strong>PubChem:</strong> Cosmetic ingredient chemical reference lookups.</li>
+                        <li><strong>CosIng, ECHA, and EWG Skin Deep:</strong> External research/reference resources that may be opened from the App.</li>
+                        <li><strong>PayPal / Wise:</strong> Optional external donation pages if the user chooses to support the App's creator.</li>
+                        <li><strong>Coil:</strong> Image loading and caching library used inside the App.</li>
+                    </ul>
+                </div>
+
+                <div class="section notice">
+                    <h2>5. Important Accuracy, Allergy, Digestive, and Safety Notice</h2>
+                    <ul>
+                        <li>The App relies in part on third-party and community-maintained product databases. Product information can be <strong>incomplete, outdated, or inaccurate</strong>.</li>
+                        <li>A valid real-world product may not yet appear in a free public database, even if its barcode is correct.</li>
+                        <li>Allergen, ingredient, digestive-trigger, cosmetic, pet food, or cleaning-product information may be missing or incomplete in online database entries.</li>
+                        <li>The App may generate warnings, ingredient insights, translations, voice summaries, digestive-profile alerts, cleaner-label alerts, or note-based reminders, but these are <strong>informational only</strong>.</li>
+                        <li><strong>Always check the real product packaging and manufacturer information</strong>, especially for allergies, intolerances, IBS / SIBO / digestive sensitivities, medical conditions, pet safety, chemical exposure concerns, or skin sensitivities.</li>
+                        <li>The App does <strong>not</strong> provide medical, nutritional, veterinary, dermatological, toxicological, regulatory, or legal advice.</li>
+                        <li>Cosmetic and chemical reference tools such as PubChem, CosIng, ECHA, and EWG are provided for research convenience only and may have their own limitations, notices, and rules.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>6. Your Rights and Choices</h2>
+                    <ul>
+                        <li><strong>Camera Permission:</strong> You can deny or revoke camera access at any time in system settings.</li>
+                        <li><strong>History Controls:</strong> You can disable history saving and clear saved scan history inside the App.</li>
+                        <li><strong>Notes and Preferences:</strong> You can edit or clear your local product notes, allergen settings, digestive profiles, translation language, and other settings inside the App.</li>
+                        <li><strong>Translation Choice:</strong> You can choose which translation service the App uses when multiple options are offered.</li>
+                        <li><strong>Voice Controls:</strong> You can disable voice mode or adjust speech settings at any time.</li>
+                        <li><strong>Database Controls:</strong> You can enable or disable certain barcode databases in the App settings.</li>
+                        <li><strong>Local Data Removal:</strong> You can remove local App data by clearing App storage or uninstalling the App.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>7. Children's Privacy</h2>
+                    <p>The App is not intended for children under the age of 13, and we do not knowingly seek to collect personal information from children through account creation or similar systems, because the App does not require an account.</p>
+                </div>
+
+                <div class="section">
+                    <h2>8. Data Security</h2>
+                    <p>Because most App data is stored locally, the security of that data depends largely on your device's own protections, such as screen lock, device encryption, and system security updates. No method of local storage or internet transmission can be guaranteed to be perfectly secure.</p>
+                </div>
+
+                <div class="section">
+                    <h2>9. Terms of Use</h2>
+                    <ul>
+                        <li>By using the App, you agree to use it at your own risk.</li>
+                        <li>The App is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis to the extent permitted by applicable law.</li>
+                        <li>We do not guarantee uninterrupted availability, complete accuracy, or fitness for a particular purpose.</li>
+                        <li>You are responsible for your own decisions based on the App's output, and you should independently verify important information from product packaging, manufacturers, veterinarians, doctors, or other qualified professionals where appropriate.</li>
+                        <li>Third-party databases, translators, speech engines, donation providers, and external reference sites may change, become unavailable, impose limits, or operate under their own separate legal terms and privacy policies.</li>
+                        <li>If you do not agree with these terms, please do not use the App.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>10. Changes to This Privacy Policy</h2>
+                    <p>We may update this page from time to time to reflect new App features, platform changes, service changes, or legal requirements. The "Last Updated" date at the top shows the latest revision date.</p>
+                </div>
+
+                <div class="contact">
+                    <h2>11. Contact Us</h2>
+                    <p>If you have questions about this Privacy Policy or the App, contact us at: <a href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
+                </div>
+            </main>
+        </article>
     </div>
 </body>
 </html>

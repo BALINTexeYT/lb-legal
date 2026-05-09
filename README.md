@@ -1,2 +1,2 @@
 # lb-legal
-Privacy Policy and legal documents for the LB Food Scanner app.
+Privacy Policy and legal documents for the LB : Universal Scanner app.

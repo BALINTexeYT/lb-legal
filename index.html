@@ -41,7 +41,15 @@
             content: "";
             display: block;
             height: 6px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent), var(--accent-2));
+            background-size: 300% 100%;
+            animation: blueFlow 4s ease-in-out infinite;
+        }
+
+        @keyframes blueFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .page {
@@ -67,12 +75,24 @@
         }
 
         .eyebrow {
+            display: inline-block;
             margin: 0 0 10px;
-            color: var(--accent);
+            color: transparent;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+            background-size: 240% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
             font-size: 0.88rem;
-            font-weight: 800;
+            font-weight: 850;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+            animation: blueTextFlow 4s ease-in-out infinite;
+        }
+
+        @keyframes blueTextFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         h1 {
@@ -241,6 +261,21 @@
             text-decoration: underline;
         }
 
+        .animated-email {
+            color: transparent;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent));
+            background-size: 240% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: blueTextFlow 4s ease-in-out infinite;
+            text-decoration: none;
+        }
+
+        .animated-email:hover {
+            text-decoration: underline;
+            text-decoration-color: var(--accent-2);
+        }
+
         .section {
             padding-bottom: 2px;
         }
@@ -273,6 +308,14 @@
         .small {
             color: var(--muted);
             font-size: 0.95rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body::before,
+            .eyebrow,
+            .animated-email {
+                animation: none;
+            }
         }
 
         @media (max-width: 760px) {
@@ -365,7 +408,7 @@
                     </div>
                     <div class="meta-item">
                         <span class="meta-label">Contact</span>
-                        <span class="meta-value">lbfoodscannerapp@gmail.com</span>
+                        <span class="meta-value"><a class="animated-email" href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></span>
                     </div>
                 </div>
             </header>
@@ -660,7 +703,7 @@
 
                 <div class="contact" id="contact">
                     <h2>13. Contact Us</h2>
-                    <p>If you have questions about this Privacy Policy or the App, contact us at: <a href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
+                    <p>If you have questions about this Privacy Policy or the App, contact us at: <a class="animated-email" href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
                     <p class="small">Developer / publisher: Bálint, creator of LB: Universal Scanner.</p>
                 </div>
             </main>

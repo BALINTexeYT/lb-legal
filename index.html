@@ -3,727 +3,1179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - LB: Universal Scanner</title>
-    <meta name="description" content="Privacy Policy and Terms of Use for LB: Universal Scanner.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#080b12">
+    <title>Privacy Policy and Terms - LB: Universal Scanner</title>
+    <meta name="description" content="Privacy Policy and Terms of Use for LB: Universal Scanner, including local data, scanning, translation, voice, supply safety, recalls, and third-party services.">
 
     <style>
         :root {
             color-scheme: light dark;
-            --accent: #0B00FF;
-            --accent-2: #00A9FF;
-            --accent-3: #77E6FF;
-            --accent-soft: #EEF3FF;
-            --text: #1f2933;
-            --muted: #657080;
-            --border: #e5e7eb;
+            --accent: #0b00ff;
+            --accent-mid: #0078ff;
+            --accent-light: #69ddff;
+            --accent-soft: #eef3ff;
+            --accent-line: #cbd5ff;
+            --text: #202938;
+            --muted: #5f6d7e;
+            --heading: #0d1729;
+            --border: #dfe5ec;
             --surface: #ffffff;
-            --surface-soft: #f8fafc;
-            --heading: #0f172a;
-            --card-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-            --toc-link-bg: #ffffff;
-            --toc-link-border: #d8ddff;
-            --notice-bg: #EEF3FF;
-            --notice-border: #d8ddff;
-            --warning-bg: #fff7ed;
-            --warning-border: #fed7aa;
-            --warning-text: #7c2d12;
+            --surface-alt: #f6f8fb;
+            --page: #edf2f7;
+            --local: #087c52;
+            --local-soft: #e8f7f0;
+            --online: #9a5b00;
+            --online-soft: #fff5df;
+            --danger: #a83030;
+            --danger-soft: #fff0ef;
+            --focus: #00a9ff;
+            --shadow: 0 12px 34px rgba(18, 35, 58, 0.09);
         }
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --accent-soft: rgba(11, 0, 255, 0.18);
-                --text: #dbe7f3;
-                --muted: #9aa8ba;
-                --border: #263245;
-                --surface: #111827;
-                --surface-soft: #070b12;
-                --heading: #f8fbff;
-                --card-shadow: 0 22px 60px rgba(0, 0, 0, 0.42);
-                --toc-link-bg: #0b1220;
-                --toc-link-border: #243658;
-                --notice-bg: rgba(11, 0, 255, 0.16);
-                --notice-border: #263d79;
-                --warning-bg: rgba(251, 146, 60, 0.13);
-                --warning-border: rgba(251, 146, 60, 0.35);
-                --warning-text: #fed7aa;
+                --accent-soft: #17174a;
+                --accent-line: #303f85;
+                --text: #dbe5ef;
+                --muted: #a3b0bf;
+                --heading: #f7f9fc;
+                --border: #273447;
+                --surface: #0d131e;
+                --surface-alt: #111a27;
+                --page: #080b12;
+                --local: #79dfb8;
+                --local-soft: #0f3027;
+                --online: #ffd083;
+                --online-soft: #35270f;
+                --danger: #ffaaa5;
+                --danger-soft: #361c1d;
+                --focus: #70dcff;
+                --shadow: 0 16px 40px rgba(0, 0, 0, 0.34);
             }
         }
 
-        * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 24px;
+        }
 
         body {
             margin: 0;
-            background:
-                radial-gradient(circle at top left, rgba(0, 169, 255, 0.16), transparent 30rem),
-                linear-gradient(180deg, var(--surface-soft) 0%, var(--accent-soft) 100%);
+            background: var(--page);
             color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.65;
+            font-size: 16px;
+            line-height: 1.68;
         }
 
         body::before {
             content: "";
-            display: block;
+            position: fixed;
+            z-index: 100;
+            inset: 0 0 auto;
             height: 7px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-2), var(--accent));
+            background: linear-gradient(90deg, var(--accent), var(--accent-mid), var(--accent-light), var(--accent-mid), var(--accent));
             background-size: 300% 100%;
-            animation: blueFlow 5s ease-in-out infinite;
+            animation: blue-flow 5s ease-in-out infinite;
         }
 
-        @keyframes blueFlow {
-            0% { background-position: 0% 50%; }
+        @keyframes blue-flow {
+            0%, 100% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
-        .animated-blue-text,
-        .eyebrow,
-        .animated-link {
-            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent-2), var(--accent));
-            background-size: 280% 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: blueTextFlow 5s ease-in-out infinite;
+        .animated-blue-text {
+            color: var(--accent-mid);
         }
 
-        @keyframes blueTextFlow {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+            .animated-blue-text {
+                background: linear-gradient(90deg, var(--accent), var(--accent-mid), var(--accent-light), var(--accent-mid), var(--accent));
+                background-size: 280% 100%;
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                animation: blue-flow 5s ease-in-out infinite;
+            }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            body::before,
-            .animated-blue-text,
-            .eyebrow,
-            .animated-link { animation: none; }
-        }
-
-        .page {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 32px 18px 56px;
-        }
-
-        .policy-card {
+        .skip-link {
+            position: fixed;
+            z-index: 200;
+            top: 12px;
+            left: 12px;
+            transform: translateY(-160%);
+            padding: 9px 12px;
+            border: 2px solid var(--focus);
+            border-radius: 6px;
             background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            box-shadow: var(--card-shadow);
-            overflow: hidden;
+            color: var(--heading);
+            font-weight: 700;
         }
 
-        header {
-            padding: 38px 36px 28px;
-            background:
-                radial-gradient(circle at top right, rgba(0, 169, 255, 0.18), transparent 34%),
-                linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, var(--accent-soft) 100%);
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        a {
+            color: #075ed1;
+            font-weight: 700;
+            text-underline-offset: 3px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            a { color: #69d8ff; }
+        }
+
+        a:hover {
+            text-decoration-thickness: 2px;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--focus);
+            outline-offset: 3px;
+        }
+
+        .site-header {
+            padding: 72px 20px 34px;
+            background: var(--surface);
             border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner,
+        .page-shell {
+            width: min(1140px, 100%);
+            margin: 0 auto;
         }
 
         .eyebrow {
             margin: 0 0 10px;
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             font-weight: 850;
             letter-spacing: 0.08em;
             text-transform: uppercase;
         }
 
         h1 {
+            max-width: 850px;
             margin: 0;
             color: var(--heading);
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            line-height: 1.08;
+            font-size: clamp(2.2rem, 6vw, 4.4rem);
+            line-height: 1.03;
             letter-spacing: 0;
         }
 
-        .subtitle {
-            max-width: 760px;
-            margin: 14px 0 0;
+        .lede {
+            max-width: 790px;
+            margin: 18px 0 0;
             color: var(--muted);
-            font-size: 1.05rem;
+            font-size: 1.08rem;
         }
 
-        .meta-grid {
+        .meta-list {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 24px;
+            gap: 1px;
+            margin: 28px 0 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--border);
         }
 
         .meta-item {
             min-width: 0;
-            padding: 12px 14px;
-            border: 1px solid rgba(0, 169, 255, 0.22);
-            border-radius: 12px;
-            background: var(--surface);
+            padding: 13px 15px;
+            background: var(--surface-alt);
+        }
+
+        .meta-label,
+        .meta-value {
+            display: block;
         }
 
         .meta-label {
-            display: block;
             color: var(--muted);
-            font-size: 0.78rem;
-            font-weight: 700;
+            font-size: 0.75rem;
+            font-weight: 750;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
         }
 
         .meta-value {
-            display: block;
             margin-top: 3px;
             color: var(--heading);
             font-weight: 750;
             overflow-wrap: anywhere;
         }
 
-        main { padding: 30px 36px 38px; }
-
-        .intro {
-            margin-top: 0;
-            font-size: 1.05rem;
+        .page-shell {
+            padding: 24px 20px 64px;
         }
 
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 12px;
-            margin: 22px 0 28px;
+            margin-bottom: 24px;
         }
 
-        .summary-card {
-            padding: 16px;
+        .summary-item {
+            min-width: 0;
+            padding: 15px;
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-top: 4px solid var(--accent-mid);
+            border-radius: 8px;
             background: var(--surface);
+            box-shadow: var(--shadow);
         }
 
-        .summary-card strong {
+        .summary-item.local { border-top-color: var(--local); }
+        .summary-item.online { border-top-color: var(--online); }
+
+        .summary-item strong {
+            display: block;
+            color: var(--heading);
+            line-height: 1.3;
+        }
+
+        .summary-item span {
+            display: block;
+            margin-top: 5px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .document-layout {
+            display: grid;
+            grid-template-columns: 230px minmax(0, 1fr);
+            gap: 30px;
+            align-items: start;
+        }
+
+        .contents {
+            position: sticky;
+            top: 24px;
+            padding: 4px 22px 4px 0;
+            border-right: 1px solid var(--border);
+        }
+
+        .contents h2 {
+            margin: 0 0 10px;
+            color: var(--heading);
+            font-size: 0.92rem;
+            text-transform: uppercase;
+        }
+
+        .contents ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .contents li + li {
+            margin-top: 2px;
+        }
+
+        .contents a {
+            display: block;
+            padding: 6px 8px;
+            border-radius: 5px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 650;
+            line-height: 1.35;
+            text-decoration: none;
+        }
+
+        .contents a:hover {
+            background: var(--accent-soft);
+            color: var(--heading);
+        }
+
+        .policy {
+            min-width: 0;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .policy-intro,
+        .policy-section,
+        .policy-footer {
+            padding: 28px 32px;
+        }
+
+        .policy-intro,
+        .policy-section {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .policy-intro p:last-child,
+        .policy-section > :last-child,
+        .policy-footer > :last-child {
+            margin-bottom: 0;
+        }
+
+        h2,
+        h3 {
+            color: var(--heading);
+            letter-spacing: 0;
+        }
+
+        .policy-section h2,
+        .policy-footer h2 {
+            margin: 0 0 16px;
+            padding-left: 13px;
+            border-left: 4px solid var(--accent);
+            font-size: 1.48rem;
+            line-height: 1.25;
+        }
+
+        h3 {
+            margin: 28px 0 9px;
+            font-size: 1.08rem;
+            line-height: 1.35;
+        }
+
+        p {
+            margin: 0 0 14px;
+        }
+
+        ul {
+            margin: 10px 0 16px;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--heading);
+        }
+
+        code {
+            padding: 1px 5px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            background: var(--surface-alt);
+            color: var(--heading);
+            font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+            font-size: 0.9em;
+        }
+
+        .callout {
+            margin: 20px 0;
+            padding: 16px 18px;
+            border: 1px solid var(--accent-line);
+            border-left: 4px solid var(--accent-mid);
+            border-radius: 7px;
+            background: var(--accent-soft);
+        }
+
+        .callout.local {
+            border-color: var(--local);
+            background: var(--local-soft);
+        }
+
+        .callout.warning {
+            border-color: var(--online);
+            background: var(--online-soft);
+        }
+
+        .callout.danger {
+            border-color: var(--danger);
+            background: var(--danger-soft);
+        }
+
+        .callout-title {
             display: block;
             margin-bottom: 5px;
-        }
-
-        .summary-card p {
-            margin: 0;
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        .toc {
-            margin: 24px 0 34px;
-            padding: 18px;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            background: var(--surface-soft);
-        }
-
-        .toc-title {
-            margin: 0 0 10px;
             color: var(--heading);
             font-weight: 800;
         }
 
-        .toc-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .toc a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 34px;
-            padding: 6px 10px;
-            border: 1px solid var(--toc-link-border);
-            border-radius: 999px;
-            background: var(--toc-link-bg);
-            color: var(--accent-2);
-            font-size: 0.92rem;
-            text-decoration: none;
-        }
-
-        .toc a:hover {
-            background: var(--accent-soft);
-            text-decoration: none;
-        }
-
-        h2 {
-            margin: 36px 0 12px;
-            padding-left: 14px;
-            border-left: 4px solid var(--accent);
-            color: var(--heading);
-            font-size: 1.35rem;
-            line-height: 1.3;
-        }
-
-        h3 {
-            margin: 24px 0 8px;
-            color: var(--heading);
-            font-size: 1.05rem;
-        }
-
-        p { margin: 0 0 14px; }
-        ul { margin: 10px 0 0; padding-left: 22px; }
-        li { margin-bottom: 9px; }
-        li ul { margin-top: 8px; }
-
-        strong {
-            color: var(--heading);
-            font-weight: 750;
-        }
-
-        a {
-            color: var(--accent-2);
-            text-decoration: none;
-            font-weight: 750;
-        }
-
-        a:hover { text-decoration: underline; }
-
-        .section { padding-bottom: 2px; }
-
-        .notice {
-            margin-top: 34px;
-            padding: 20px;
-            border-radius: 12px;
-            background: var(--notice-bg);
-            border: 1px solid var(--notice-border);
-        }
-
-        .warning-note {
-            margin-top: 18px;
-            padding: 14px 16px;
-            border-radius: 12px;
-            background: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            color: var(--warning-text);
-        }
-
-        .warning-note strong { color: var(--warning-text); }
-
-        .contact {
-            margin-top: 34px;
-            padding: 22px;
-            border-radius: 12px;
-            background: var(--surface-soft);
+        .table-wrap {
+            width: 100%;
+            margin: 18px 0 24px;
+            overflow-x: auto;
             border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            min-width: 680px;
+            border-collapse: collapse;
+            background: var(--surface);
+            font-size: 0.93rem;
+        }
+
+        caption {
+            padding: 12px 14px;
+            background: var(--surface-alt);
+            color: var(--heading);
+            font-weight: 800;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 12px 14px;
+            border-top: 1px solid var(--border);
+            vertical-align: top;
+            text-align: left;
+        }
+
+        th {
+            width: 24%;
+            color: var(--heading);
+            font-weight: 750;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-bottom: 5px;
+            padding: 2px 7px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--heading);
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .badge.local {
+            background: var(--local-soft);
+            color: var(--local);
+        }
+
+        .badge.online {
+            background: var(--online-soft);
+            color: var(--online);
         }
 
         .small {
             color: var(--muted);
-            font-size: 0.95rem;
+            font-size: 0.91rem;
         }
 
-        @media (max-width: 760px) {
-            .meta-grid,
-            .summary-grid { grid-template-columns: 1fr; }
+        .back-to-top {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 640px) {
-            .page { padding: 16px 12px 40px; }
-            header,
-            main { padding-left: 20px; padding-right: 20px; }
-            .policy-card { border-radius: 12px; }
-            .toc-links { display: grid; grid-template-columns: 1fr; }
-            .toc a { border-radius: 10px; }
+        .policy-footer {
+            background: var(--surface-alt);
+        }
+
+        @media (max-width: 900px) {
+            .meta-list,
+            .summary-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .document-layout {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .contents {
+                position: static;
+                padding: 14px;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                background: var(--surface);
+            }
+
+            .contents ol {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 2px 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .site-header {
+                padding: 54px 16px 26px;
+            }
+
+            h1 {
+                font-size: 2.32rem;
+            }
+
+            .page-shell {
+                padding: 16px 10px 40px;
+            }
+
+            .meta-list,
+            .summary-grid,
+            .contents ol {
+                grid-template-columns: 1fr;
+            }
+
+            .policy-intro,
+            .policy-section,
+            .policy-footer {
+                padding: 23px 19px;
+            }
+
+            .policy-section h2,
+            .policy-footer h2 {
+                font-size: 1.28rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            body::before,
+            .animated-blue-text { animation: none; }
         }
 
         @media print {
-            body { background: #ffffff; color: #000000; }
-            body::before { display: none; }
-            .page { max-width: none; padding: 0; }
-            .policy-card { box-shadow: none; border: none; }
-            header { background: #ffffff; }
-            .toc { display: none; }
-            .animated-blue-text,
-            .eyebrow,
-            .animated-link {
-                color: #000000;
-                background: none;
-                -webkit-background-clip: initial;
-                background-clip: initial;
+            :root {
+                color-scheme: light;
+                --text: #111111;
+                --muted: #444444;
+                --heading: #000000;
+                --border: #cccccc;
+                --surface: #ffffff;
+                --surface-alt: #ffffff;
+                --page: #ffffff;
             }
-            a { color: #000000; text-decoration: underline; }
+
+            body::before,
+            .skip-link,
+            .contents,
+            .summary-grid,
+            .back-to-top {
+                display: none;
+            }
+
+            .site-header,
+            .page-shell {
+                padding: 0;
+            }
+
+            .site-header {
+                border: 0;
+            }
+
+            .document-layout {
+                display: block;
+            }
+
+            .policy {
+                border: 0;
+                box-shadow: none;
+            }
+
+            .policy-intro,
+            .policy-section,
+            .policy-footer {
+                padding: 18px 0;
+            }
+
+            .animated-blue-text,
+            a {
+                background: none;
+                color: #000000;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            .table-wrap {
+                overflow: visible;
+            }
+
+            table {
+                min-width: 0;
+            }
+
+            .policy-section {
+                break-inside: avoid-page;
+            }
         }
     </style>
 </head>
 
-<body>
-    <div class="page">
-        <article class="policy-card">
-            <header>
-                <p class="eyebrow">Privacy Policy and Terms of Use</p>
-                <h1>Privacy Policy for LB: Universal Scanner</h1>
-                <p class="subtitle">This page explains how LB: Universal Scanner handles data, what third-party services may be used, and what choices users have.</p>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to policy</a>
 
-                <div class="meta-grid" aria-label="Policy details">
-                    <div class="meta-item">
-                        <span class="meta-label">Last Updated</span>
-                        <span class="meta-value">July 5, 2026</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">App</span>
-                        <span class="meta-value">LB: Universal Scanner</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Developer</span>
-                        <span class="meta-value">Bálint</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Contact</span>
-                        <span class="meta-value">lbfoodscannerapp@gmail.com</span>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="eyebrow animated-blue-text">Privacy Policy and Terms of Use</p>
+            <h1>LB: Universal Scanner</h1>
+            <p class="lede">How the App handles scans, local profiles, translation, voice features, product databases, supply-safety tools, optional recalls, sharing, and your choices.</p>
+
+            <div class="meta-list" aria-label="Policy details">
+                <div class="meta-item">
+                    <span class="meta-label">Last updated</span>
+                    <span class="meta-value">July 19, 2026</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Current Android scope</span>
+                    <span class="meta-value">Version 1.2.9</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Developer / publisher</span>
+                    <span class="meta-value">Bálint</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Contact</span>
+                    <span class="meta-value"><a class="animated-blue-text" href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-shell">
+        <div class="summary-grid" aria-label="Privacy summary">
+            <div class="summary-item">
+                <strong>No account required</strong>
+                <span>No developer-run user account or cloud profile is needed.</span>
+            </div>
+            <div class="summary-item local">
+                <strong>Local by default</strong>
+                <span>Manual label processing and most saved results, settings, profiles, and notes remain on the device.</span>
+            </div>
+            <div class="summary-item online">
+                <strong>Online when needed</strong>
+                <span>Selected lookups, translation, speech, and external research use third parties.</span>
+            </div>
+            <div class="summary-item">
+                <strong>No third-party ads</strong>
+                <span>The App is not funded by advertising and does not sell personal data.</span>
+            </div>
+        </div>
+
+        <div class="document-layout">
+            <nav class="contents" aria-label="Policy contents">
+                <h2>Contents</h2>
+                <ol>
+                    <li><a href="#scope">1. Scope and principles</a></li>
+                    <li><a href="#data-map">2. Data flow at a glance</a></li>
+                    <li><a href="#local-data">3. Information on your device</a></li>
+                    <li><a href="#permissions">4. Permissions</a></li>
+                    <li><a href="#voice">5. Voice and accessibility</a></li>
+                    <li><a href="#third-parties">6. Third-party data flows</a></li>
+                    <li><a href="#services">7. Service summary</a></li>
+                    <li><a href="#website">8. Website and GitHub Pages</a></li>
+                    <li><a href="#safety">9. Accuracy and safety</a></li>
+                    <li><a href="#choices">10. Your choices</a></li>
+                    <li><a href="#retention">11. Retention and deletion</a></li>
+                    <li><a href="#children">12. Children's privacy</a></li>
+                    <li><a href="#security">13. Security</a></li>
+                    <li><a href="#terms">14. Terms of Use</a></li>
+                    <li><a href="#changes">15. Changes</a></li>
+                    <li><a href="#contact">16. Contact</a></li>
+                </ol>
+            </nav>
+
+            <main class="policy" id="main-content">
+                <div class="policy-intro">
+                    <p>Thank you for using LB: Universal Scanner (the "App"). This document explains how the App handles information, which features may contact third-party services, what choices users have, and the basic terms that apply to use of the App.</p>
+                    <p>This policy is intended to cover the Android and iPhone versions of the App. Features and data flows vary by platform, installed app version, device support, country, permissions, and selected settings. Android version 1.2.9 is the current implementation specifically audited for this revision.</p>
+                    <div class="callout local">
+                        <span class="callout-title">The central privacy rule</span>
+                        The developer does not operate an account server that receives your scan history, notes, health-related profile choices, baskets, or local App Health results. Online services receive limited request data only when a feature needs them or you choose to open or share something.
                     </div>
                 </div>
-            </header>
 
-            <main>
-                <p class="intro">Thank you for using LB: Universal Scanner ("the App"). This Privacy Policy applies to the Android and iPhone versions of the App, depending on platform, app version, device support, country, and enabled settings. It also includes basic Terms of Use.</p>
-
-                <div class="summary-grid" aria-label="Privacy summary">
-                    <div class="summary-card">
-                        <strong>No account required</strong>
-                        <p>The App is designed to work without creating a user account or cloud profile.</p>
-                    </div>
-                    <div class="summary-card">
-                        <strong>Local by default</strong>
-                        <p>Most settings, scan history, notes, profiles, and preferences stay on your device.</p>
-                    </div>
-                    <div class="summary-card">
-                        <strong>No third-party ads</strong>
-                        <p>The App does not show third-party ads and is not built around advertising trackers.</p>
-                    </div>
-                </div>
-
-                <nav class="toc" aria-label="Policy sections">
-                    <p class="toc-title">Sections</p>
-                    <div class="toc-links">
-                        <a href="#core">Core Principle</a>
-                        <a href="#local-data">Local Data</a>
-                        <a href="#voice">Voice Features</a>
-                        <a href="#third-party">Third Parties</a>
-                        <a href="#services">Services</a>
-                        <a href="#safety">Safety Notice</a>
-                        <a href="#choices">Choices</a>
-                        <a href="#retention">Retention</a>
-                        <a href="#security">Security</a>
-                        <a href="#terms">Terms</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </nav>
-
-                <div class="section" id="core">
-                    <h2>1. The Core Principle</h2>
-                    <p>The App is built to be privacy-friendly and useful without unnecessary accounts or tracking.</p>
+                <section class="policy-section" id="scope">
+                    <h2>1. Scope and Core Principles</h2>
                     <ul>
                         <li><strong>No account is required</strong> to use the App.</li>
                         <li><strong>No third-party ads are shown</strong> in the App.</li>
                         <li>The App is designed without a developer-run cloud profile for users.</li>
-                        <li>The majority of your data, including scan history, saved product notes, local profiles, allergen preferences, digestive-profile preferences, keto preferences, Healthy Longevity preferences, fiber tracking entries, scan mode, selected translation language, voice settings, reminder settings, reduced-motion settings, and most other settings, is stored <strong>only on your device</strong>.</li>
                         <li>The App does not sell your personal data.</li>
-                        <li>Some features depend on third-party services such as product databases, nutrition databases, translation services, speech services, cosmetic/chemical reference sources, donation pages, app stores, and your device's built-in camera, speech, and notification services. Those services may receive limited data needed to provide the feature you choose to use.</li>
+                        <li>The App does not include a developer-operated analytics or crash-reporting service. Google ML Kit diagnostics and app-store/platform diagnostics are separate exceptions described below.</li>
+                        <li>Most App data is stored locally, including scan history, saved product notes, local family profiles, allergen and sensitivity selections, digestive and keto settings, Healthy Longevity preferences, baskets, pantry or shelf items, fiber entries, translation preferences, voice settings, reminder settings, theme choices, and most other settings.</li>
+                        <li>Some features depend on external product databases, online translators, platform speech providers, public chemical and safety references, a public recalls API, donation providers, app stores, and websites you choose to open.</li>
+                        <li>The App does not send product questions to ChatGPT, Gemini, OpenAI, IBM, or a developer-operated large language model. The current product-question feature uses recognized speech text, available scan data, bundled knowledge, selected profiles, and deterministic App rules.</li>
                     </ul>
-                </div>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                <div class="section" id="local-data">
-                    <h2>2. Information Processed on Your Device</h2>
-                    <p>To provide its features, the App needs to access or process certain information. Most of this is handled locally on your device.</p>
+                <section class="policy-section" id="data-map">
+                    <h2>2. Data Flow at a Glance</h2>
+                    <p>The table below summarizes the main paths. More detail appears in later sections.</p>
 
-                    <h3>a. Camera, photos, barcode scanning, and manual scanning</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <caption>What stays local and what can leave the device</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Feature</th>
+                                    <th scope="col">Main data</th>
+                                    <th scope="col">Normal destination</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span class="badge local">Local</span><br>Camera, barcode, and OCR</th>
+                                    <td>Camera frames, label photos, recognized text, crop position, barcode value</td>
+                                    <td>Processed on the device by the App and supported system or ML Kit components. Temporary image files may be stored in App cache.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge local">Local</span><br>Profiles and saved features</th>
+                                    <td>History, notes, allergens, sensitivities, diet settings, baskets, favorites, pantry/shelf items, reminders</td>
+                                    <td>App storage on the device. No developer-run account receives this data.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Online</span><br>Barcode and name lookup</th>
+                                    <td>Barcode or product-name search, App identifier/version, standard network metadata</td>
+                                    <td>The selected Open Facts database or optional FoodRepo source.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Choice</span><br>Translation</th>
+                                    <td>Selected source text and language pair for an online provider; language/model diagnostics for supported on-device services</td>
+                                    <td>On-device ML Kit or system translation, or the selected online provider such as LibreTranslate or Lingva.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Choice</span><br>Voice input and output</th>
+                                    <td>Speech audio or recognized text, and text to be spoken</td>
+                                    <td>The installed Android, Google, Apple, or other system speech provider chosen by the device.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Choice</span><br>Recall lookup</th>
+                                    <td>Barcode first, then available product name if needed</td>
+                                    <td>The official U.S. CPSC recalls API at SaferProducts.gov.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Choice</span><br>Research links</th>
+                                    <td>Ingredient name, search term, product code, or ordinary browser request data</td>
+                                    <td>PubChem or an external reference website that you choose to open.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="badge online">Choice</span><br>Copy, share, PDF, email, donate</th>
+                                    <td>The content you choose to copy, share, attach, send, or submit</td>
+                                    <td>System clipboard, selected share app, email provider, payment provider, or browser.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="small">Any internet service normally receives technical connection data such as IP address, request time, protocol details, and a user-agent or app identifier. The developer does not control the independent retention practices of those services.</p>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="local-data">
+                    <h2>3. Information Processed or Stored on Your Device</h2>
+
+                    <h3>a. Camera, photos, barcode scanning, and manual label scanning</h3>
                     <ul>
-                        <li><strong>Why we need it:</strong> The App supports barcode scanning and manual product scanning from photos, including human food ingredient lists, pet food ingredient lists, cosmetic INCI lists, and cleaning product labels.</li>
-                        <li><strong>How it is used:</strong> The camera is only used when you actively scan a product, search for a barcode, or take a photo for text recognition.</li>
-                        <li><strong>Camera guidance:</strong> When supported, the App may use barcode boxes, visible text blocks, and screen-position math to provide guidance such as moving left, right, up, down, closer, or holding steady. This guidance is an accessibility and usability feature and does not identify you.</li>
-                        <li><strong>On-device processing:</strong> Depending on platform and app version, barcode scanning, text recognition, language identification, image crop assistance, and related features may use <strong>Google ML Kit</strong> on Android and/or <strong>Apple system frameworks</strong> and translation-related system services on iPhone.</li>
-                        <li><strong>Temporary files:</strong> Temporary image files, crop data, or cache files may be created during scan processing or image handling on your device.</li>
+                        <li>The App supports barcode scanning and manual label scanning for human food, pet food, cosmetics, cleaning products, and supported art, school, office, craft, and household supplies.</li>
+                        <li>The camera is used when you actively open a camera-based feature. Camera frames may be analyzed for barcodes, text blocks, focus, framing, and accessibility guidance.</li>
+                        <li>On Android, Google ML Kit may provide barcode scanning, OCR/text recognition, language identification, and on-device translation. On iPhone, comparable Apple system frameworks may be used where available.</li>
+                        <li>After manual OCR, the Review Scanned Text screen lets you correct recognized text, remove unrelated content, clear the result, or retake the photo before analysis. Your edits are processed locally.</li>
+                        <li>Temporary images, crop data, and cached files may be created in App-controlled cache storage. Cache is not intended as permanent photo storage.</li>
                     </ul>
 
-                    <h3>b. Scan history and product results</h3>
+                    <h3>b. Scan history, notes, favorites, shelf/pantry, and product identity</h3>
                     <ul>
-                        <li>The App can save recently scanned products so you can view them again later.</li>
-                        <li>Saved scan history is stored only in the App's local device storage.</li>
-                        <li>You can disable history saving or clear saved history in the App settings.</li>
+                        <li>Scan history can store recent results locally so you can reopen them. You can disable history saving or clear history in the App.</li>
+                        <li>Version 1.2.9 uses a stable product identity to reduce duplicate history entries and update a recent entry when the same product is scanned again.</li>
+                        <li>Per-product notes, safe-list entries, favorites, shelf or pantry items, and reminder-style information are stored locally, normally under a barcode or product key.</li>
+                        <li>These local items are not synchronized to a developer-operated account and are not visible to other users through the App.</li>
                     </ul>
 
-                    <h3>c. Per-product notes, safe list, favorites, shelf-style saving, and saved reminders</h3>
+                    <h3>c. Local profiles, sensitivities, diets, and household tools</h3>
                     <ul>
-                        <li>You can save your own notes for scanned products, for example packaging details, missing allergen information, digestive triggers, sensitivities, or personal reminders.</li>
-                        <li>The App may include local product saving features such as safe list, favorites, shelf-style product saving, or product notes.</li>
-                        <li>These saved items are stored locally on your device only, usually per barcode or per scanned product key.</li>
-                        <li>Notes and saved products are not shared with other users and are not uploaded by the App to a developer-operated account.</li>
+                        <li>The App may support local profiles for different people or preference sets. These are convenience profiles, not online accounts.</li>
+                        <li>Local profile data can include profile names, allergens, cross-mode sensitivities, cosmetic sensitivities, digestive triggers, FODMAP or IBS/SIBO settings, keto settings, Healthy Longevity preferences, cleaner-label preferences, and other caution toggles.</li>
+                        <li>Basket, pantry, household-safety, fiber-tracking, weekly-pattern, and similar summaries are built from available local history, saved products, settings, and product data.</li>
                     </ul>
 
-                    <h3>d. Local profiles and preferences</h3>
+                    <h3>d. Ingredient analysis, relations, coverage, vitamins, and supply safety</h3>
                     <ul>
-                        <li>The App may let users create or switch local profiles, for example for different family members or different preference sets.</li>
-                        <li>Profile names, selected allergens, sensitivities, digestive profiles, keto settings, Healthy Longevity settings, custom digestive triggers, Biofarm / Cleaner Label preferences, nutrition alert toggles, scan mode, translation language, voice mode, speech rate and pitch, dark mode, background theme, notification preferences, reduced-motion preferences, and similar settings are stored locally on your device.</li>
-                        <li>Profiles are local convenience features. They are not online accounts.</li>
+                        <li>Bundled local JSON knowledge can provide aliases, summaries, ingredient families, related ingredients, source notes, warnings, benefits, digestive tags, cross-reactivity notes, and plain-language explanations where entries exist.</li>
+                        <li>Coverage spans food, cosmetics, pet food, cleaning products, and a separate supply-knowledge set. Cosmetics currently have especially detailed INCI aliases, position guidance, and sensitivity checks.</li>
+                        <li>The cross-mode relation system can compare recognized terms with a selected profile across product categories. A relation or cross-reactivity note is a caution signal, not a diagnosis or prediction of a reaction.</li>
+                        <li>Analysis Coverage can show how many parsed label segments matched bundled knowledge, matched examples, available product fields, and unmatched text. An unmatched segment is not proof that the ingredient is safe or unsafe.</li>
+                        <li>Warnings may explain their source, such as local ingredient knowledge, nutrition data, a selected allergen profile, a diet/caution profile, a cosmetic sensitivity, or a recognized label code.</li>
+                        <li>Vitamin and mineral names may be recognized from product data or label text and accompanied by general informational notes where available. The App does not invent a quantity when the label or source does not provide one.</li>
+                        <li>For cleaning and supply labels, the App can recognize likely use context, certain GHS <code>H</code>/<code>EUH</code> hazard codes, <code>P</code> precaution codes, signal words, Safety Data Sheet wording, and some standard or seal wording. It cannot authenticate a logo, certification, seal, or Safety Data Sheet.</li>
                     </ul>
 
-                    <h3>e. Translation settings and cache</h3>
+                    <h3>e. Experimental ratings, baskets, and suggestions</h3>
                     <ul>
-                        <li>The App may remember your selected target translation language so future scanned products and supported App screens can be translated more conveniently.</li>
-                        <li>The selected language and any cached translations are stored locally on your device.</li>
-                        <li>You can switch back to Original text or change translation settings inside the App.</li>
-                        <li>Official product names, brand names, barcode database names, scientific names, and cosmetic INCI names may stay in their original language because translating those terms can make them less safe or less recognizable.</li>
+                        <li>The App may show an experimental LB System Rating out of 100, Healthy Longevity fit, Blue Zone style information, Smart Swap guidance, FODMAP/IBS/SIBO or keto basket summaries, and household-safety summaries.</li>
+                        <li>These outputs are calculated from available data and selected settings. They are informational and can be incomplete or wrong.</li>
+                        <li>A safe-list label, positive score, suggested substitute, or high basket score does not guarantee that a product is safe, suitable, healthy, or free from contamination.</li>
                     </ul>
 
-                    <h3>f. Raw food, fiber, nutrition, vitamins, and minerals</h3>
+                    <h3>f. Translation settings and caches</h3>
                     <ul>
-                        <li>The App may include raw food search, fiber lookup, nutrition lookup, daily fiber tracking, vitamin notes, mineral notes, or similar diet-support tools.</li>
-                        <li>Food names, selected amounts, daily totals, and diary-style entries are stored locally unless a feature clearly uses an online database lookup.</li>
-                        <li>Vitamin and mineral information is shown only when available from product data or supported local/reference data. It is informational only.</li>
+                        <li>The App can remember the selected App and product-result language and can cache translations locally to avoid repeating work.</li>
+                        <li>Official product names, brands, barcode database names, scientific names, chemical names, GHS codes, and cosmetic INCI names may remain in their original form because translating them can make them harder to verify or less safe to recognize.</li>
+                        <li>If a translation is incomplete, the App may show original text and a partial-translation notice. Translation does not change the official packaging.</li>
                     </ul>
 
-                    <h3>g. Experimental product score, baskets, and warnings</h3>
+                    <h3>g. Product images, session caches, and App Health</h3>
                     <ul>
-                        <li>The App may show an experimental LB System Rating, such as an out-of-100 score, based on available product data, warnings, allergens, ingredients, nutrition details, and user settings.</li>
-                        <li>The App may include basket-style summaries for scanned products, such as Healthy Longevity, Blue Zone, FODMAP, IBS/SIBO, keto, or household safety style summaries where available.</li>
-                        <li>Scores, baskets, and related explanations are generated for convenience and are informational only.</li>
-                        <li>Scores may be incomplete or wrong if product data is incomplete, outdated, mistranslated, or missing.</li>
+                        <li>If a product source provides an image URL, the App may download and cache the image locally for display. The image host receives the normal image request.</li>
+                        <li>Recent barcode and product-name results may be cached for the current App session to reduce repeated requests. Session counters may show reused results and successful online requests.</li>
+                        <li>App Health can display local device and configuration checks, including permissions, speech availability, language/translator settings, reminder state, local database counts, session request status, and an offline bundled-data self-test.</li>
+                        <li>App Health and local self-test results are not uploaded to the developer.</li>
                     </ul>
 
-                    <h3>h. Ingredient insights and ingredient relations</h3>
+                    <h3>h. Android backup behavior</h3>
+                    <p>Android version 1.2.9 disables Android backup for the App and excludes its root files, files, databases, shared preferences, and external App data from cloud backup and device transfer. Platform behavior may differ on iPhone and in other App versions.</p>
+
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="permissions">
+                    <h2>4. Permissions and System Access</h2>
                     <ul>
-                        <li>The App may show ingredient summaries, aliases, ingredient families, related ingredients, source/origin notes, INCI position notes for cosmetics, sensitivity flags, and cross-mode warnings across food, cosmetics, pet food, and cleaning products where data is available.</li>
-                        <li>These insights are based on local data, public references, database information, product labels, and app rules. Coverage varies and may be incomplete.</li>
+                        <li><strong>Camera:</strong> Used for barcode and label scanning. You can deny or revoke it in system settings.</li>
+                        <li><strong>Internet:</strong> Used for product databases, optional online translation, model or language downloads, recall checks, product images, and external references.</li>
+                        <li><strong>Notifications:</strong> Optional on supported Android versions for daily scan reminders. You can deny the permission or disable reminders.</li>
+                        <li><strong>Boot, time, and time-zone events:</strong> On Android, the App can receive reboot, clock-change, and time-zone-change events so an enabled daily reminder can be scheduled again at the chosen local time. This does not give the App general access to your device activity.</li>
+                        <li><strong>Speech recognition:</strong> Android version 1.2.9 launches an installed system speech-recognition activity for spoken product questions or voice profile selection. The App itself does not declare Android's <code>RECORD_AUDIO</code> permission, but the selected speech provider may display its own interface, use microphone access, and apply its own privacy terms.</li>
+                        <li><strong>Clipboard and sharing:</strong> Copy and share actions use Android or iOS system facilities only after you select the action.</li>
                     </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                    <h3>i. Product images and cached media</h3>
+                <section class="policy-section" id="voice">
+                    <h2>5. Voice, Speech, and Accessibility Features</h2>
+                    <p>Availability depends on platform, installed speech providers and voices, permissions, selected language, and device support.</p>
+
+                    <h3>a. Text-to-speech and spoken results</h3>
                     <ul>
-                        <li>If a product database provides an image URL, the App may load that image and cache it locally on your device for display performance.</li>
-                    </ul>
-
-                    <h3>j. App health and diagnostics</h3>
-                    <ul>
-                        <li>The App may show an App Health screen with information such as camera permission, notification permission, speech-service availability, selected language, translator setting, reminder status, reduced-motion status, local database counts, and recent online-request status.</li>
-                        <li>This information is shown to help users understand whether features can work correctly on their device.</li>
-                        <li>App Health information is not a developer-run diagnostic upload and is not an account profile.</li>
-                    </ul>
-                </div>
-
-                <div class="section" id="voice">
-                    <h2>3. Voice, Speech, and Accessibility Features</h2>
-                    <p>The App may include optional voice and accessibility features. Availability depends on your device, installed speech services, permissions, language, and app version.</p>
-
-                    <h3>a. Text-to-speech / spoken results</h3>
-                    <ul>
-                        <li>If you enable Voice Assistant Mode, the App can send text to your device's configured speech engine so results, warnings, ingredients, guidance, and answers can be read aloud.</li>
-                        <li>On Android this may use Android Text-to-Speech, Google Speech Services, or another installed device speech engine. On iPhone this may use Apple speech services or another supported system service.</li>
-                        <li>The App does not create its own custom cloud voice. The voice normally comes from the device or operating system.</li>
+                        <li>Voice Assistant Mode can send result text, warnings, ingredients, guidance, and question answers to the device's configured text-to-speech engine.</li>
+                        <li>On Android this may be Android Text-to-Speech, Google Speech Services, or another installed engine. On iPhone this may be an Apple system voice or another supported platform service.</li>
+                        <li>The App does not create or host a custom cloud voice. Voice language and pronunciation depend on the installed system voice.</li>
                     </ul>
 
                     <h3>b. Spoken questions and voice profile selection</h3>
                     <ul>
-                        <li>If you use spoken product questions or voice profile selection, your device's speech-recognition service may process your voice input and return recognized text to the App.</li>
-                        <li>Depending on your device and settings, speech recognition may be handled locally or by a system/provider service such as Google or Apple. That provider may process voice input under its own privacy policy and terms.</li>
-                        <li>The App uses the recognized text to answer questions from the currently available scan data, selected local profile, and app rules. It does not guarantee safety.</li>
-                        <li>The App does not require a developer-run account to use these voice features.</li>
+                        <li>When you start a spoken question or voice profile action, the selected device/provider speech service may process your speech and return recognized text to the App.</li>
+                        <li>Recognition may occur locally or through the provider's online service, depending on provider, device, language, and settings.</li>
+                        <li>The App uses the returned text only to match the requested action against current scan data, local settings, and deterministic rules. It cannot answer reliably when the needed data is missing.</li>
                     </ul>
 
-                    <h3>c. Not a generative-AI chatbot</h3>
+                    <h3>c. Warning tone and camera guidance</h3>
                     <ul>
-                        <li>The App's spoken product answers are based on available scan data, local JSON data, selected profiles, product database data, and app logic.</li>
-                        <li>The App does not send your product questions to ChatGPT, Gemini, OpenAI, IBM, or a developer-operated large language model service.</li>
-                        <li>Machine-learning services may still be used for OCR/text recognition, barcode support, language identification, translation, or platform speech features, depending on platform and settings.</li>
+                        <li>An optional urgent tone can play before a severe matched profile warning is spoken.</li>
+                        <li>Barcode guidance uses detected barcode position. Ingredient-label guidance uses visible text position and capture conditions. Guidance such as left, right, up, down, closer, or hold steady can be wrong if the view is blurry, dark, reflective, blocked, tilted, or unsupported.</li>
                     </ul>
 
-                    <h3>d. Warning tones and camera guidance</h3>
+                    <h3>d. Machine learning is not the same as generative AI</h3>
+                    <p>The App can use machine-learning components for OCR, barcode detection, language identification, on-device translation, and platform speech recognition. The current App does not use a generative-AI or LLM service to decide whether a scanned product is safe or to compose product answers.</p>
+
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="third-parties">
+                    <h2>6. Information Shared With Third-Party Services</h2>
+                    <p>The App sends only the request data needed for the feature being used. Third-party services also receive ordinary network metadata and apply their own terms, privacy practices, security measures, and retention periods.</p>
+
+                    <h3>a. Product barcode lookups and product-name search</h3>
                     <ul>
-                        <li>The App may play an optional urgent warning tone before severe matched profile warnings are spoken.</li>
-                        <li>The App may provide spoken camera guidance for barcode scanning or ingredient-label scanning. This is based on detected barcode/text position and may be wrong if the camera view is blurry, dark, tilted, blocked, or too far away.</li>
+                        <li><strong>Human food:</strong> a barcode or name query may be sent to Open Food Facts and Pro Open Food Facts. Optional legacy FoodRepo use can be enabled where available.</li>
+                        <li><strong>Pet food:</strong> a barcode or name query may be sent to Open Pet Food Facts.</li>
+                        <li><strong>Cosmetics:</strong> a barcode or name query may be sent to Open Beauty Facts.</li>
+                        <li><strong>Cleaning and non-food products:</strong> a barcode or name query may be sent to Open Products Facts.</li>
+                        <li><strong>Universal / Auto Detect:</strong> the same barcode may be checked against multiple supported sources one by one. This can be slower and can expose the barcode to more than one database.</li>
+                        <li>Requests identify LB: Universal Scanner and its current version in the user-agent and include the developer's support email for API identification. They do not include your local profile, notes, or scan history.</li>
                     </ul>
-                </div>
 
-                <div class="section" id="third-party">
-                    <h2>4. Information Shared With Third-Party Services</h2>
-                    <p>Some features require limited data to be sent to third-party services. We do not require an account from you to use these features.</p>
-
-                    <h3>a. Barcode lookups</h3>
+                    <h3>b. Google ML Kit and platform machine-learning services</h3>
                     <ul>
-                        <li><strong>Human food:</strong> When you scan a human food barcode, the barcode may be sent to <strong>Open Food Facts</strong> and <strong>Pro Open Food Facts</strong> to retrieve product information.</li>
-                        <li>If you manually enable the optional legacy source where available, the barcode may also be sent to <strong>FoodRepo.org</strong>.</li>
-                        <li><strong>Pet food:</strong> When you scan a pet food barcode, the barcode may be sent to <strong>Open Pet Food Facts</strong>.</li>
-                        <li><strong>Cosmetics:</strong> When you scan a cosmetic barcode, the barcode may be sent to <strong>Open Beauty Facts</strong>.</li>
-                        <li><strong>Cleaning products:</strong> When you scan a cleaning product barcode, the barcode may be sent to <strong>Open Products Facts</strong>.</li>
+                        <li>Google states that ML Kit processes input images, video, text, and resulting outputs on-device and does not send those inputs or outputs to Google servers.</li>
+                        <li>ML Kit may still contact Google for bug fixes, updated models, model downloads, and hardware compatibility information.</li>
+                        <li>Google states that ML Kit SDKs can collect diagnostics and usage information such as device and App information, per-installation identifiers, performance metrics, API configuration, input/output size, feature versions and events, error codes, identified languages, and configured translation source/destination languages. Google states this data is encrypted in transit and is not transferred by ML Kit to third parties.</li>
+                        <li>Google notes that its disclosure page describes the latest SDK versions. Exact handling can vary with the ML Kit version packaged in the installed App.</li>
+                        <li>See <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer">Google ML Kit Terms and Privacy</a> and <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank" rel="noopener noreferrer">ML Kit Android data disclosure</a>.</li>
                     </ul>
 
-                    <h3>b. Universal / Auto Detect scanner</h3>
+                    <h3>c. Translation providers</h3>
                     <ul>
-                        <li>If you use Universal / Auto Detect mode, the barcode may be checked against multiple supported barcode databases one by one until matching product data is found or sources are exhausted.</li>
-                        <li>This mode may be slower and may send the barcode to more than one supported product database.</li>
+                        <li>Translation can use Google ML Kit, Apple system translation services, LibreTranslate, or Lingva depending on platform, version, selected setting, language pair, and service availability.</li>
+                        <li>For on-device translation, language models may be downloaded and related SDK diagnostics may be sent as described above.</li>
+                        <li>For an online translator, the text you ask to translate, source/destination language, App user-agent, IP address, and normal request metadata are sent to that provider.</li>
+                        <li>Online translation can fail, be rate-limited, return partial text, or become unavailable. Do not rely on translation alone for safety-critical label decisions.</li>
                     </ul>
 
-                    <h3>c. Product search by name</h3>
+                    <h3>d. Speech providers</h3>
+                    <p>Spoken questions, voice profile selection, and text-to-speech use the device's installed provider. The provider may process audio, recognized text, text-to-speech input, language, voice configuration, device identifiers, and diagnostics according to its own terms. The App developer does not receive the voice recording through a developer server.</p>
+
+                    <h3>e. Chemical, ingredient, safety, and supply references</h3>
                     <ul>
-                        <li>If you search for a product by name, the search text may be sent to the selected or relevant product database service so matching products can be shown.</li>
-                        <li>Search results depend on the third-party database and may be incomplete or unavailable.</li>
+                        <li>If you request extra chemical information from an ingredient card, the ingredient name may be sent to PubChem. This is available for supported cosmetic and cleaning/supply ingredients.</li>
+                        <li>The App may open CosIng, ECHA, EWG Skin Deep, EPA CompTox, EPA Safer Ingredients, NIOSH, CPSC guidance, ACMI product information, EU Safety Gate, UN GHS resources, or another listed source in your browser.</li>
+                        <li>Opening a resource sends ordinary browser data to that website. A search link may include an ingredient name, product term, barcode, or other visible query in the URL.</li>
+                        <li>External research links are for convenience. A link does not mean the source endorses LB: Universal Scanner or that the App authenticates a product, seal, standard, or claim.</li>
                     </ul>
 
-                    <h3>d. Raw food and nutrition lookups</h3>
+                    <h3>f. Optional CPSC recall lookup</h3>
                     <ul>
-                        <li>If the App offers raw food, fiber, vitamin, mineral, or nutrition lookup from online sources, the food name or search query may be sent to public nutrition databases or reference sources, such as <strong>USDA FoodData Central</strong> or other open/public food data providers where supported.</li>
-                        <li>The App may use returned nutrition information to show informational results.</li>
+                        <li>For supported supply results, you may choose to query the official U.S. Consumer Product Safety Commission recalls API.</li>
+                        <li>The App sends the barcode first and may send the available product name if needed. The request also includes normal connection metadata and the App user-agent.</li>
+                        <li>Returned items are possible matches only. You must compare exact brand, model, date code, packaging, and UPC with the official notice.</li>
+                        <li>A result or no-result response is not proof of current product safety, regulatory compliance, or recall status in every country.</li>
+                        <li>See the <a href="https://www.cpsc.gov/Recalls/CPSC-Recalls-Application-Program-Interface-API-Information" target="_blank" rel="noopener noreferrer">official CPSC Recalls API information</a>.</li>
                     </ul>
 
-                    <h3>e. Translation services</h3>
+                    <h3>g. Copy Summary, Share Summary, and PDF reports</h3>
                     <ul>
-                        <li>Depending on platform, app version, and chosen settings, translation may use <strong>Google ML Kit</strong>, <strong>Apple Translate</strong> or related Apple system translation services, <strong>LibreTranslate</strong>, or <strong>Lingva Translate</strong>.</li>
-                        <li>If you choose an online translator, the text you choose to translate may be sent to that selected third-party service.</li>
-                        <li>Some translation models or language packages may be downloaded to your device when needed.</li>
+                        <li><strong>Copy Summary</strong> places the displayed summary on the system clipboard. Clipboard content is then governed by your device and any apps with permitted clipboard access.</li>
+                        <li><strong>Share Summary</strong> opens the system share interface with the current product summary. The selected destination app or service receives the shared text.</li>
+                        <li>Product share summaries are designed to omit private notes, note-influenced warning sections, and profile settings, but you should still review the displayed summary before sharing.</li>
+                        <li>A doctor/dietitian wellness PDF is created only when you request it. It can contain the selected profile name, basket and household summaries, recent food scans, and pantry information. The PDF is created in temporary App cache and shared through the destination you choose.</li>
+                        <li>Once content is copied or shared outside the App, the App cannot control how the clipboard, receiving app, recipient, or provider stores or uses it.</li>
                     </ul>
 
-                    <h3>f. Speech services</h3>
+                    <h3>h. Product pages and contribution websites</h3>
+                    <p>If you open a product's source page or a contribution option, the browser URL may contain the barcode, product code, or search query. Any information you submit on that external site is governed by that site's policies.</p>
+
+                    <h3>i. Email, suggestions, donations, and app stores</h3>
                     <ul>
-                        <li>If you use spoken questions, voice profile selection, text-to-speech, or similar voice features, your device's installed speech services may process speech input, recognized text, or spoken output under their own privacy policies and terms.</li>
-                        <li>The App only uses the speech result needed for the feature you actively choose to use.</li>
+                        <li>If you email the developer, your email address, message, attachments, and provider metadata are processed by your email provider and received by the developer.</li>
+                        <li>If you open PayPal or Wise to donate, the selected provider processes payment and account information. The App never directly receives your card or bank credentials.</li>
+                        <li>Donations are optional and do not unlock premium features, faster scans, badges, or digital extras.</li>
+                        <li>Google Play, Apple App Store, Android, iOS, and device manufacturers may independently process installs, updates, crashes, diagnostics, reviews, ratings, or store interactions.</li>
                     </ul>
 
-                    <h3>g. Cosmetic ingredient research features</h3>
-                    <ul>
-                        <li>If you tap a cosmetic ingredient card to load extra reference data, the ingredient name may be sent to <strong>PubChem</strong> to retrieve chemical reference information.</li>
-                        <li>If you choose to open <strong>CosIng</strong>, <strong>ECHA</strong>, or <strong>EWG Skin Deep</strong>, the App may open those services in your browser. Your use of those sites is governed by their own terms and privacy policies.</li>
-                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                    <h3>h. Source product pages and contribution websites</h3>
-                    <ul>
-                        <li>If you choose to open a product's source page or use a contribution option, the App may open an external website in your browser and include the barcode, product code, or search query in the destination URL.</li>
-                    </ul>
+                <section class="policy-section" id="services">
+                    <h2>7. Summary of Services, Libraries, and Public Sources</h2>
 
-                    <h3>i. Optional donations / support</h3>
-                    <ul>
-                        <li>If you tap the Donate option, the App may open <strong>PayPal</strong> or <strong>Wise</strong> in your browser or app so you can support the creator voluntarily.</li>
-                        <li>Donations are optional and do <strong>not</strong> unlock premium features, faster scans, badges, or digital extras inside the App.</li>
-                        <li>The App does not process your payment card or banking details directly. Payment information is handled by the selected donation provider.</li>
-                    </ul>
-
-                    <h3>j. Email contact and suggestions</h3>
-                    <ul>
-                        <li>If you choose to send us an email, your email app/provider will process your email address and message contents in the normal way.</li>
-                        <li>We will receive whatever information you voluntarily include in that email and use it to respond, investigate the issue, provide support, review suggestions, or improve the App.</li>
-                    </ul>
-
-                    <h3>k. App stores and platform services</h3>
-                    <ul>
-                        <li>Google Play, the Apple App Store, Android, iOS, and device manufacturers may process information such as installs, updates, crashes, diagnostics, reviews, ratings, or store interactions under their own privacy policies.</li>
-                        <li>This is separate from the App's local storage and from any developer-operated account, because the App does not require an account.</li>
-                    </ul>
-                </div>
-
-                <div class="section" id="no-account">
-                    <h2>5. No Account, No Ads, Optional Support</h2>
-                    <ul>
-                        <li>The App does <strong>not</strong> require you to create an account.</li>
-                        <li>The App does <strong>not</strong> show third-party ads.</li>
-                        <li>The App is designed to work without a cloud profile or centralized user account.</li>
-                        <li>Optional donations may be offered through external services, but they do not change the App's core functionality or grant digital benefits.</li>
-                    </ul>
-                </div>
-
-                <div class="section" id="services">
-                    <h2>6. Summary of Third-Party Services</h2>
-                    <p>The App may use or link to the following third-party tools, services, libraries, and public databases, depending on platform, app version, country, device support, and settings:</p>
-                    <ul>
-                        <li><strong>Google ML Kit:</strong> Barcode scanning, OCR/text recognition, language identification, and translation support on supported Android versions.</li>
-                        <li><strong>Apple system frameworks / Apple Translate / Apple speech services:</strong> Supported iPhone scanning, translation, and speech-related features where available.</li>
-                        <li><strong>Android Speech Recognition / Android Text-to-Speech:</strong> Speech input and spoken output on supported Android devices when voice features are used.</li>
-                        <li><strong>Android / iOS notification services:</strong> Local scan reminder notifications when enabled by the user.</li>
-                        <li><strong>Open Food Facts / Pro Open Food Facts:</strong> Human food barcode and product data.</li>
-                        <li><strong>FoodRepo.org:</strong> Optional legacy human food barcode source where available and enabled by the user.</li>
-                        <li><strong>Open Pet Food Facts:</strong> Pet food barcode and product data.</li>
-                        <li><strong>Open Beauty Facts:</strong> Cosmetic barcode and product data.</li>
-                        <li><strong>Open Products Facts:</strong> Cleaning product and non-food product barcode data.</li>
-                        <li><strong>USDA FoodData Central or other public nutrition sources:</strong> Raw food, fiber, vitamin, mineral, or nutrition reference data where supported.</li>
-                        <li><strong>LibreTranslate / Lingva Translate:</strong> Optional translation providers selected by the user.</li>
-                        <li><strong>PubChem:</strong> Cosmetic ingredient chemical reference lookups.</li>
-                        <li><strong>CosIng, ECHA, and EWG Skin Deep:</strong> External research/reference resources that may be opened from the App.</li>
-                        <li><strong>PayPal / Wise:</strong> Optional external donation pages if the user chooses to support the App's creator.</li>
-                        <li><strong>Coil:</strong> Image loading and caching library used inside the App.</li>
-                        <li><strong>Google Play / Apple App Store:</strong> Store listing, installs, reviews, ratings, crash/diagnostic information, and other platform-provided app information under their own policies.</li>
-                    </ul>
-                </div>
-
-                <div class="section notice" id="safety">
-                    <h2>7. Important Accuracy, Allergy, Digestive, Diet, Voice, and Safety Notice</h2>
-                    <ul>
-                        <li>The App relies in part on third-party and community-maintained product databases. Product information can be <strong>incomplete, outdated, mistranslated, or inaccurate</strong>.</li>
-                        <li>A valid real-world product may not yet appear in a free public database, even if its barcode is correct.</li>
-                        <li>Allergen, ingredient, digestive-trigger, keto, fiber, nutrition, vitamin, mineral, cosmetic, pet food, or cleaning-product information may be missing or incomplete in online database entries.</li>
-                        <li>The App may generate warnings, ingredient insights, translations, voice summaries, spoken answers, camera guidance, digestive-profile alerts, keto-related alerts, cleaner-label alerts, raw food/fiber estimates, note-based reminders, or experimental product scores, but these are <strong>informational only</strong>.</li>
-                        <li>Spoken answers are limited to the information available in the current scan and App data. They are not a guarantee that a product is safe, suitable, complete, or recommended.</li>
-                        <li>Camera guidance can fail or be inaccurate if the product is blurry, poorly lit, too close, too far, tilted, damaged, reflective, partially hidden, or not supported by the scanner.</li>
-                        <li>The experimental score out of 100 is a convenience feature. It is not a guarantee that a product is safe, healthy, suitable, recommended, or appropriate for any specific person, pet, condition, allergy, diet, or household.</li>
-                        <li><strong>Always check the real product packaging and manufacturer information</strong>, especially for allergies, intolerances, IBS / SIBO / digestive sensitivities, keto or other diet restrictions, medical conditions, pet safety, chemical exposure concerns, or skin sensitivities.</li>
-                        <li>The App does <strong>not</strong> provide medical, nutritional, veterinary, dermatological, toxicological, regulatory, or legal advice.</li>
-                        <li>Cosmetic and chemical reference tools such as PubChem, CosIng, ECHA, and EWG are provided for research convenience only and may have their own limitations, notices, and rules.</li>
-                    </ul>
-
-                    <div class="warning-note">
-                        <strong>Important:</strong> If you have a serious allergy, medical condition, dietary restriction, or pet-safety concern, do not rely on the App alone. Check the product label and ask a qualified professional where appropriate.
+                    <div class="table-wrap">
+                        <table>
+                            <caption>Services used or linked depending on platform and selected feature</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Service or source</th>
+                                    <th scope="col">Purpose</th>
+                                    <th scope="col">Typical request</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Google ML Kit</th>
+                                    <td>Barcode scanning, OCR, language identification, on-device translation</td>
+                                    <td>Inputs remain on-device according to Google; SDK diagnostics, model events, language configuration, and model downloads may contact Google.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Apple system frameworks</th>
+                                    <td>Scanning, translation, speech, and platform support on iPhone where available</td>
+                                    <td>Depends on the installed iPhone version, Apple service, and settings.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Android or Apple speech services</th>
+                                    <td>Speech recognition and text-to-speech</td>
+                                    <td>Speech audio or recognized text, text to speak, language, and provider diagnostics.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Open Food Facts / Pro Open Food Facts</th>
+                                    <td>Human-food product data</td>
+                                    <td>Barcode or name query and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Open Pet Food Facts</th>
+                                    <td>Pet-food product data</td>
+                                    <td>Barcode or name query and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Open Beauty Facts</th>
+                                    <td>Cosmetic product data</td>
+                                    <td>Barcode or name query and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Open Products Facts</th>
+                                    <td>Cleaning and other non-food product data</td>
+                                    <td>Barcode or name query and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">FoodRepo.org</th>
+                                    <td>Optional legacy human-food source where enabled</td>
+                                    <td>Barcode and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">LibreTranslate / Lingva</th>
+                                    <td>Optional online translation</td>
+                                    <td>Text, source/destination language, and App user-agent.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PubChem</th>
+                                    <td>Chemical reference lookup</td>
+                                    <td>Ingredient or chemical name.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CPSC / SaferProducts.gov</th>
+                                    <td>Optional U.S. public recall search and safety guidance</td>
+                                    <td>Barcode or product name.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CosIng, ECHA, EWG, EPA, NIOSH, ACMI, EU Safety Gate, UN GHS</th>
+                                    <td>External research and official or specialist reference pages</td>
+                                    <td>Browser visit and, where included in the link, an ingredient or search term.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">USDA reference data</th>
+                                    <td>Bundled raw-food fiber reference entries</td>
+                                    <td>The current Android reference is bundled locally; opening an external USDA page would be a separate browser visit.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Coil</th>
+                                    <td>Image loading and local image caching</td>
+                                    <td>Coil is an in-App library; the product image host receives the image request.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PayPal / Wise</th>
+                                    <td>Optional external donation</td>
+                                    <td>Only after you open the provider and choose to proceed.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Google Play / Apple App Store</th>
+                                    <td>Distribution, updates, reviews, and platform diagnostics</td>
+                                    <td>Handled independently under the store and platform policies.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
 
-                <div class="section" id="choices">
-                    <h2>8. Your Rights and Choices</h2>
+                    <p>Open Facts product information is community-maintained and may be incomplete, inaccurate, or outdated. The App uses read requests for lookups. If you choose to contribute on an external website, that contribution is a separate interaction with the external service.</p>
+                    <p>Third-party names are used only to identify services and sources. Their inclusion does not imply sponsorship or endorsement.</p>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="website">
+                    <h2>8. This Website and GitHub Pages</h2>
                     <ul>
-                        <li><strong>Camera Permission:</strong> You can deny or revoke camera access at any time in system settings.</li>
-                        <li><strong>Microphone / Speech Input:</strong> If your platform requests microphone or speech-recognition permission for spoken questions or voice profile selection, you can deny or revoke it in system settings. Availability depends on your device and speech provider.</li>
-                        <li><strong>Notification Permission:</strong> You can disable scan reminders in the App settings or revoke notification permission in system settings.</li>
-                        <li><strong>History Controls:</strong> You can disable history saving and clear saved scan history inside the App.</li>
-                        <li><strong>Notes and Preferences:</strong> You can edit or clear your local product notes, family/profile settings, allergen settings, sensitivity settings, digestive profiles, keto settings, fiber tracking entries, translation language, voice settings, and other settings inside the App.</li>
-                        <li><strong>Translation Choice:</strong> You can choose which translation service the App uses when multiple options are offered.</li>
-                        <li><strong>Voice Controls:</strong> You can disable voice mode, stop speech, adjust speech settings, or avoid spoken-question features at any time.</li>
-                        <li><strong>Database Controls:</strong> Where the App offers database options, you can adjust them in settings.</li>
-                        <li><strong>Reduced Motion:</strong> You can enable reduced-motion settings where supported to limit screen transition animations.</li>
-                        <li><strong>Local Data Removal:</strong> You can remove local App data by clearing App storage or uninstalling the App.</li>
+                        <li>This legal page is a static GitHub Pages site. It does not contain a developer-added analytics script, advertising tracker, account system, form, or first-party cookie mechanism.</li>
+                        <li>GitHub hosts and delivers the page. GitHub states that a visitor's IP address is logged and stored for security purposes whether or not the visitor is signed in.</li>
+                        <li>GitHub may process service-usage information and cookies according to its own policies and the visitor's circumstances.</li>
+                        <li>External links and the email link leave this page. The selected website, browser, email app, or provider can then receive normal request or message information.</li>
                     </ul>
-                </div>
+                    <p>For more information, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" target="_blank" rel="noopener noreferrer">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                <div class="section" id="retention">
-                    <h2>9. Data Retention and Deletion</h2>
+                <section class="policy-section" id="safety">
+                    <h2>9. Important Accuracy, Allergy, Health, Recall, and Supply-Safety Notice</h2>
+
+                    <div class="callout danger">
+                        <span class="callout-title">Never rely on the App alone for a safety-critical decision</span>
+                        Always inspect the current physical package, full ingredient list, allergen statement, warning panel, manufacturer information, model/date code, and Safety Data Sheet where relevant. Ask a qualified professional when the risk is serious or unclear.
+                    </div>
+
                     <ul>
-                        <li>Local App data stays on your device until you delete it, clear it through App settings, clear the App's storage through system settings, or uninstall the App.</li>
-                        <li>Because the App does not require an account, there is no developer-operated account deletion process.</li>
-                        <li>If you email us for support or suggestions, we may keep that email for as long as reasonably needed to respond, investigate the issue, keep records of the support request, or improve the App.</li>
-                        <li>Third-party services used by the App, such as product databases, translators, speech services, donation providers, app stores, and external reference sites, may have their own retention and deletion policies.</li>
+                        <li>Barcode databases and public sources can be incomplete, delayed, community-maintained, region-specific, or wrong. A barcode can still point to an older formulation while the package in your hand has changed.</li>
+                        <li>Manual OCR can omit, merge, or misread words and codes. Review and correct the recognized text before analysis, especially for allergens, concentration values, hazard codes, and look-alike characters.</li>
+                        <li>No match, no warning, high score, positive spoken answer, or database no-result means only that the App did not identify a problem from the information available. It does not prove safety.</li>
+                        <li>Allergy and cross-reactivity rules cannot predict whether a particular person will react. Ingredient families and related-ingredient notices are educational cautions, not diagnoses.</li>
+                        <li>FODMAP, IBS/SIBO, keto, Healthy Longevity, Blue Zone, nutrition, fiber, vitamin, mineral, score, basket, and swap features are informational and are not medical or dietetic advice.</li>
+                        <li>Cosmetic INCI position guidance estimates where an ingredient appears in the list. Ingredient ordering rules, concentration thresholds, mixtures, colorants, and regional labeling exceptions mean position does not reveal an exact percentage.</li>
+                        <li>Pet-food and cross-mode warnings do not replace veterinary advice and do not establish that exposure is safe for a specific species, animal, dose, or medical condition.</li>
+                        <li>Cleaning and supply analysis does not replace the current label, Safety Data Sheet, poison-control guidance, occupational-safety procedure, teacher/supervisor instructions, or local law.</li>
+                        <li>Recognized GHS codes can be false positives or incomplete after OCR. <code>P</code> codes remain for verification because their exact wording and context matter.</li>
+                        <li>The App cannot authenticate ACMI or other marks, certifications, seals, regulatory status, age suitability, or manufacturer claims from an image or OCR text.</li>
+                        <li>CPSC results are possible U.S. recall matches only. Recall systems differ by country, and a no-match result is not proof that a product has never been recalled.</li>
+                        <li>Translations and spoken output can be incomplete, mistranslated, mispronounced, or unavailable. Official names may remain untranslated for verification.</li>
+                        <li>The App does not provide medical, nutritional, veterinary, pharmaceutical, dermatological, toxicological, occupational-safety, regulatory, recall, or legal advice.</li>
                     </ul>
-                </div>
 
-                <div class="section" id="children">
-                    <h2>10. Children's Privacy</h2>
-                    <p>The App is not intended for children under the age of 13, and we do not knowingly seek to collect personal information from children through account creation or similar systems, because the App does not require an account.</p>
-                </div>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                <div class="section" id="security">
-                    <h2>11. Data Security</h2>
-                    <p>Because most App data is stored locally, the security of that data depends largely on your device's own protections, such as screen lock, device encryption, and system security updates. No method of local storage or internet transmission can be guaranteed to be perfectly secure.</p>
-                    <p>When the App connects to third-party services, data is generally sent over the network using the security measures provided by the device, operating system, and the relevant service. We do not control the security practices of third-party websites, speech services, product databases, app stores, or services opened outside the App.</p>
-                </div>
-
-                <div class="section" id="terms">
-                    <h2>12. Terms of Use</h2>
+                <section class="policy-section" id="choices">
+                    <h2>10. Your Rights and Choices</h2>
                     <ul>
-                        <li>By using the App, you agree to use it at your own risk.</li>
+                        <li><strong>Camera:</strong> deny or revoke camera permission in system settings.</li>
+                        <li><strong>Notifications:</strong> disable daily reminders in the App or revoke notification permission.</li>
+                        <li><strong>Speech:</strong> avoid voice-input features, change the installed provider, revoke provider microphone permission, turn off Voice Assistant Mode, stop speech, or change speech settings.</li>
+                        <li><strong>History and saved data:</strong> disable history where offered, clear history, remove saved products and notes, edit profiles, clear fiber entries, and change local preferences.</li>
+                        <li><strong>Translation:</strong> keep original text, select another language/provider, or clear App data to remove local translation cache.</li>
+                        <li><strong>Online databases:</strong> change supported database settings, avoid Universal / Auto Detect, or use manual label scanning and local analysis instead.</li>
+                        <li><strong>Recall and research:</strong> do not start an optional recall lookup or open an external reference link.</li>
+                        <li><strong>Copy/share/PDF:</strong> do not choose these actions; review content and the selected destination before sending.</li>
+                        <li><strong>Local removal:</strong> clear App storage or uninstall the App to remove local data. There is no developer-run account to delete.</li>
+                        <li><strong>Email data:</strong> you may contact the developer to ask about access, correction, or deletion of personal information you voluntarily sent by email, subject to applicable legal and record-keeping requirements.</li>
+                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="retention">
+                    <h2>11. Data Retention and Deletion</h2>
+                    <ul>
+                        <li>Persistent local App data generally remains until you delete it through the App, clear App storage, or uninstall the App.</li>
+                        <li>Temporary images and generated reports are stored in cache. The operating system or App may remove cache; clearing App storage or uninstalling removes App-controlled cache. A file shared elsewhere can remain with the recipient or destination service.</li>
+                        <li>Current-session lookup caches and request counters normally last only for the active App process/session.</li>
+                        <li>Translation caches may persist locally to improve repeat translations until App data is cleared, the cache is reset by an App change, or the App is uninstalled.</li>
+                        <li>Because no account is required, there is no developer-operated cloud history or account-deletion process.</li>
+                        <li>If you email the developer, the email may be retained for as long as reasonably needed to respond, investigate, maintain support records, protect the App, or improve it.</li>
+                        <li>Third-party databases, speech providers, translation services, GitHub, app stores, payment providers, and external websites control their own retention and deletion practices.</li>
+                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="children">
+                    <h2>12. Children's Privacy</h2>
+                    <p>The App is not directed to children under 13 and does not invite children to create an account, because no App account exists. A parent, guardian, teacher, or responsible adult should supervise children's use, especially for allergies, chemicals, art materials, school supplies, cleaning products, sharp tools, heat, fumes, or other hazards. Third-party services used through the App apply their own age and privacy rules.</p>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="security">
+                    <h2>13. Data Security</h2>
+                    <ul>
+                        <li>Most personal App data is local, so protection depends significantly on device security such as screen lock, encryption, system updates, permissions, and control of physical access.</li>
+                        <li>Android version 1.2.9 blocks cleartext network traffic at the App level and uses HTTPS endpoints for supported network services.</li>
+                        <li>Temporary files shared from Android use an App-controlled FileProvider and temporary read permission for the destination selected by the user.</li>
+                        <li>No storage method, software, device, internet transmission, third-party service, or security control can be guaranteed perfectly secure.</li>
+                        <li>The developer does not control the security of external product databases, speech or translation providers, GitHub Pages, app stores, payment services, browsers, email providers, or shared-file destinations.</li>
+                    </ul>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
+
+                <section class="policy-section" id="terms">
+                    <h2>14. Terms of Use</h2>
+                    <ul>
+                        <li>By using the App, you agree to these Terms of Use. If you do not agree, do not use the App.</li>
                         <li>The App is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis to the extent permitted by applicable law.</li>
-                        <li>We do not guarantee uninterrupted availability, complete accuracy, safety, suitability, or fitness for a particular purpose.</li>
-                        <li>You are responsible for your own decisions based on the App's output, and you should independently verify important information from product packaging, manufacturers, veterinarians, doctors, dietitians, pharmacists, dermatologists, toxicologists, or other qualified professionals where appropriate.</li>
-                        <li>Third-party databases, translators, speech engines, notification systems, app stores, donation providers, and external reference sites may change, become unavailable, impose limits, or operate under their own separate legal terms and privacy policies.</li>
-                        <li>If you do not agree with these terms, please do not use the App.</li>
+                        <li>The developer does not guarantee uninterrupted operation, continued availability of any third-party source, complete database coverage, error-free OCR or translation, accurate speech recognition, accurate scoring, or fitness for a particular purpose.</li>
+                        <li>You are responsible for decisions made using the App and for independently checking safety-critical information with current packaging, manufacturers, official recall notices, qualified clinicians, veterinarians, pharmacists, dietitians, dermatologists, toxicologists, occupational-safety professionals, teachers/supervisors, or other appropriate experts.</li>
+                        <li>Third-party content, databases, images, translations, APIs, websites, libraries, trademarks, and services remain subject to their owners' terms, licenses, availability, and rights.</li>
+                        <li>You must not use the App unlawfully, interfere with its services or third-party services, or misrepresent an App result as a professional diagnosis, official certification, regulatory decision, or guarantee of safety.</li>
+                        <li>Nothing in these Terms excludes rights or liability that cannot lawfully be excluded under applicable consumer or other law.</li>
                     </ul>
-                </div>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                <div class="section" id="changes">
-                    <h2>13. Changes to This Privacy Policy</h2>
-                    <p>We may update this page from time to time to reflect new App features, platform changes, service changes, or legal requirements. The "Last Updated" date at the top shows the latest revision date.</p>
-                </div>
+                <section class="policy-section" id="changes">
+                    <h2>15. Changes to This Policy</h2>
+                    <p>This page may be updated to reflect new App features, platform behavior, third-party services, legal requirements, or clearer explanations. The Last Updated date at the top identifies the latest revision. Material changes should be published before or when the changed behavior becomes available.</p>
+                    <a class="back-to-top" href="#top">Back to top</a>
+                </section>
 
-                <div class="contact" id="contact">
-                    <h2>14. Contact Us</h2>
-                    <p>If you have questions about this Privacy Policy, Terms of Use, suggestions, or the App, contact us at: <a class="animated-link" href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
+                <footer class="policy-footer" id="contact">
+                    <h2>16. Contact</h2>
+                    <p>For privacy questions, Terms of Use questions, support, corrections, or suggestions, contact:</p>
+                    <p><a class="animated-blue-text" href="mailto:lbfoodscannerapp@gmail.com">lbfoodscannerapp@gmail.com</a></p>
                     <p class="small">Developer / publisher: Bálint, creator of LB: Universal Scanner.</p>
-                </div>
+                </footer>
             </main>
-        </article>
+        </div>
     </div>
 </body>
 </html>

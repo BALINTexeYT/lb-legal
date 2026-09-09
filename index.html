@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="blue">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="color-scheme" content="light dark" />
         <meta name="referrer" content="no-referrer" />
-        <meta name="theme-color" content="#fafbf9" />
+        <meta name="theme-color" content="#100873" />
         <meta
             name="description"
             content="Privacy Policy and Terms of Use for LB: Universal Scanner. Understand local storage, scanning, translation, voice, recall checks, GS1 linked sources, product comparison, and your choices."
@@ -18,53 +18,91 @@
         />
         <style>
             :root {
+                color-scheme: dark;
+                /* The app's BlueAccent.kt palette, with readable blue text accents. */
+                --page: #100873;
+                --surface: #191189;
+                --soft: #261ca5;
+                --chrome: #0c055d;
+                --ink: #f8f8ff;
+                --muted: #e0e5ff;
+                --line: #544bbe;
+                --control-line: #aab8ff;
+                --accent: #9bdcff;
+                --accent-soft: #05007a;
+                --link: #9bdcff;
+                --focus: #69ddff;
+                --caution: #ffd4a6;
+                --caution-bg: #352317;
+                --number: #c5d0ff;
+                --brand-blue: #0b00ff;
+                --brand-mid: #0078ff;
+                --brand-light: #69ddff;
+                --text-blue: #a8bbff;
+                --text-mid: #85d8ff;
+                --text-light: #d9f3ff;
+            }
+            :root[data-theme="light"],
+            :root[data-theme="system"] {
                 color-scheme: light;
-                --page: #fafbf9;
+                --page: #f3f6ff;
                 --surface: #ffffff;
-                --soft: #f0f3ef;
-                --ink: #202823;
-                --muted: #58635c;
-                --line: #d7dfd8;
-                --accent: #25563f;
-                --accent-soft: #e7f1e9;
-                --link: #264caf;
-                --focus: #214dca;
-                --caution: #8a421e;
-                --caution-bg: #fff2e8;
-                --number: #5e6c62;
+                --soft: #eaf0ff;
+                --chrome: #ffffff;
+                --ink: #18213b;
+                --muted: #4c5874;
+                --line: #c9d3ed;
+                --control-line: #7382a6;
+                --accent: #0b00d9;
+                --accent-soft: #e5ecff;
+                --link: #0756bc;
+                --focus: #0b00ff;
+                --caution: #814014;
+                --caution-bg: #fff0df;
+                --number: #53607e;
+                --text-blue: #0b00d9;
+                --text-mid: #0054bf;
+                --text-light: #006488;
             }
             :root[data-theme="dark"] {
                 color-scheme: dark;
-                --page: #151917;
-                --surface: #1b211e;
-                --soft: #232b26;
-                --ink: #f1f4ef;
-                --muted: #b3bfb6;
-                --line: #39473d;
-                --accent: #a0d5ac;
-                --accent-soft: #253c2b;
-                --link: #aec9ff;
-                --focus: #bed3ff;
-                --caution: #ffc59d;
-                --caution-bg: #34271e;
-                --number: #b3bfb6;
+                --page: #080b12;
+                --surface: #0d131e;
+                --soft: #111a27;
+                --chrome: #080b12;
+                --ink: #f8f8ff;
+                --muted: #bdc8df;
+                --line: #303f65;
+                --control-line: #7086b8;
+                --accent: #85cfff;
+                --accent-soft: #121c42;
+                --link: #85cfff;
+                --focus: #69ddff;
+                --caution: #ffd4a6;
+                --caution-bg: #352317;
+                --number: #b5c5e9;
             }
             @media (prefers-color-scheme: dark) {
-                :root:not([data-theme="light"]) {
+                :root[data-theme="system"] {
                     color-scheme: dark;
-                    --page: #151917;
-                    --surface: #1b211e;
-                    --soft: #232b26;
-                    --ink: #f1f4ef;
-                    --muted: #b3bfb6;
-                    --line: #39473d;
-                    --accent: #a0d5ac;
-                    --accent-soft: #253c2b;
-                    --link: #aec9ff;
-                    --focus: #bed3ff;
-                    --caution: #ffc59d;
-                    --caution-bg: #34271e;
-                    --number: #b3bfb6;
+                    --page: #080b12;
+                    --surface: #0d131e;
+                    --soft: #111a27;
+                    --chrome: #080b12;
+                    --ink: #f8f8ff;
+                    --muted: #bdc8df;
+                    --line: #303f65;
+                    --control-line: #7086b8;
+                    --accent: #85cfff;
+                    --accent-soft: #121c42;
+                    --link: #85cfff;
+                    --focus: #69ddff;
+                    --caution: #ffd4a6;
+                    --caution-bg: #352317;
+                    --number: #b5c5e9;
+                    --text-blue: #a8bbff;
+                    --text-mid: #85d8ff;
+                    --text-light: #d9f3ff;
                 }
             }
             *,
@@ -78,6 +116,7 @@
             }
             body {
                 margin: 0;
+                padding-top: 6px;
                 background: var(--page);
                 color: var(--ink);
                 font-family:
@@ -87,6 +126,57 @@
                 line-height: 1.75;
                 letter-spacing: 0;
                 overflow-wrap: break-word;
+            }
+            body::before {
+                content: "";
+                position: fixed;
+                z-index: 20;
+                inset: 0 0 auto;
+                height: 6px;
+                pointer-events: none;
+                background: linear-gradient(
+                    90deg,
+                    var(--brand-blue),
+                    var(--brand-mid),
+                    var(--brand-light),
+                    var(--brand-mid),
+                    var(--brand-blue)
+                );
+                background-size: 300% 100%;
+                animation: blue-flow 7s ease-in-out infinite;
+            }
+            @keyframes blue-flow {
+                0%,
+                100% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+            .animated-blue-text {
+                color: var(--accent);
+            }
+            @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+                .animated-blue-text {
+                    background: linear-gradient(
+                        90deg,
+                        var(--text-blue),
+                        var(--text-mid),
+                        var(--text-light),
+                        var(--text-mid),
+                        var(--text-blue)
+                    );
+                    background-size: 280% 100%;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    animation: blue-flow 7s ease-in-out infinite;
+                }
+            }
+            :root[data-motion="paused"] body::before,
+            :root[data-motion="paused"] .animated-blue-text {
+                animation-play-state: paused;
             }
             [hidden] {
                 display: none !important;
@@ -128,8 +218,8 @@
             }
             h1 {
                 margin-bottom: 12px;
-                font-size: 42px;
-                font-weight: 720;
+                font-size: 46px;
+                font-weight: 750;
                 line-height: 1.2;
             }
             h2 {
@@ -184,6 +274,7 @@
             }
             .topbar {
                 border-bottom: 1px solid var(--line);
+                background: var(--chrome);
             }
             .topbar-inner {
                 display: flex;
@@ -200,13 +291,13 @@
                 color: var(--ink);
                 text-decoration: none;
                 line-height: 1.3;
-                font-size: 15px;
+                font-size: 18px;
                 font-weight: 680;
             }
             .brand img {
-                width: 48px;
-                height: 48px;
-                flex: 0 0 48px;
+                width: 56px;
+                height: 56px;
+                flex: 0 0 56px;
                 border-radius: 8px;
             }
             .brand span span {
@@ -245,7 +336,7 @@
                 min-height: 42px;
                 max-width: 100%;
                 padding: 7px 28px 7px 10px;
-                border: 1px solid var(--line);
+                border: 1px solid var(--control-line);
                 border-radius: 5px;
                 background: var(--surface);
                 color: var(--ink);
@@ -254,7 +345,7 @@
                 cursor: pointer;
             }
             .page-heading {
-                padding-block: 42px 32px;
+                padding-block: 40px 34px;
             }
             .eyebrow {
                 margin-bottom: 12px;
@@ -301,7 +392,7 @@
             .principle {
                 min-width: 0;
                 padding-left: 14px;
-                border-left: 2px solid var(--accent);
+                border-left: 3px solid var(--brand-mid);
             }
             .principle h2 {
                 font-size: 15px;
@@ -367,7 +458,10 @@
             .contents a[aria-current="location"] {
                 color: var(--accent);
                 background: var(--accent-soft);
-                border-left-color: var(--accent);
+                border-left-color: var(--brand-mid);
+            }
+            .contents a[aria-current="location"] {
+                font-weight: 700;
             }
             .contents-footer {
                 margin-top: 23px;
@@ -425,7 +519,7 @@
                 width: 100%;
                 min-height: 48px;
                 padding: 10px 12px 10px 42px;
-                border: 1px solid var(--line);
+                border: 1px solid var(--control-line);
                 border-radius: 5px;
                 background: var(--surface);
                 color: var(--ink);
@@ -436,21 +530,38 @@
                 color: var(--muted);
                 opacity: 1;
             }
-            .print-button {
+            .print-button,
+            .motion-button {
                 position: relative;
                 display: grid;
                 place-items: center;
                 flex: 0 0 48px;
                 width: 48px;
                 height: 48px;
-                border: 1px solid var(--line);
+                border: 1px solid var(--control-line);
                 border-radius: 5px;
-                background: var(--surface);
-                color: var(--ink);
+                background: var(--brand-blue);
+                color: #f8f8ff;
                 cursor: pointer;
             }
-            .print-button:hover {
-                background: var(--accent-soft);
+            .motion-button {
+                width: 42px;
+                height: 42px;
+                flex-basis: 42px;
+            }
+            .print-button:hover,
+            .motion-button:hover {
+                box-shadow: inset 0 0 0 2px #69ddff;
+            }
+            .motion-button .play-icon,
+            .motion-button[aria-pressed="true"] .pause-icon {
+                display: none;
+            }
+            .motion-button[aria-pressed="true"] .play-icon {
+                display: block;
+            }
+            .motion-button span:not(.tooltip) {
+                line-height: 0;
             }
             .tooltip {
                 visibility: hidden;
@@ -470,7 +581,9 @@
                 border-radius: 4px;
             }
             .print-button:hover .tooltip,
-            .print-button:focus-visible .tooltip {
+            .print-button:focus-visible .tooltip,
+            .motion-button:hover .tooltip,
+            .motion-button:focus-visible .tooltip {
                 visibility: visible;
             }
             .search-results {
@@ -500,7 +613,7 @@
                 color: var(--muted);
             }
             .note {
-                border-left: 3px solid var(--accent);
+                border-left: 3px solid var(--brand-mid);
                 padding: 14px 18px;
                 background: var(--accent-soft);
                 margin: 22px 0 0;
@@ -528,10 +641,12 @@
                 scroll-margin-top: 24px;
             }
             .section-number {
-                display: block;
+                display: inline-block;
                 color: var(--accent);
-                font-size: 12px;
-                margin-bottom: 9px;
+                font-size: 13px;
+                padding-bottom: 7px;
+                border-bottom: 3px solid var(--brand-mid);
+                margin-bottom: 14px;
                 font-variant-numeric: tabular-nums;
                 font-weight: 700;
             }
@@ -597,10 +712,11 @@
             }
             .contact-email {
                 font-size: 20px;
+                font-weight: 700;
                 overflow-wrap: anywhere;
             }
             .footer {
-                background: var(--soft);
+                background: var(--chrome);
                 border-top: 1px solid var(--line);
                 padding-block: 26px;
             }
@@ -651,6 +767,9 @@
                 .toplinks > a {
                     display: none;
                 }
+                .toplinks {
+                    gap: 8px;
+                }
                 .brand {
                     font-size: 13px;
                     gap: 8px;
@@ -664,7 +783,7 @@
                     font-size: 11px;
                 }
                 h1 {
-                    font-size: 32px;
+                    font-size: 36px;
                 }
                 h2 {
                     font-size: 23px;
@@ -732,6 +851,17 @@
                 .brand > span {
                     max-width: 108px;
                 }
+                .topbar-inner {
+                    flex-wrap: wrap;
+                }
+                .toplinks {
+                    flex-wrap: nowrap;
+                }
+                .motion-button {
+                    flex-basis: 38px;
+                    width: 38px;
+                    height: 42px;
+                }
                 .brand span span {
                     display: none;
                 }
@@ -764,8 +894,24 @@
                 html {
                     scroll-behavior: auto;
                 }
+                body::before,
+                .animated-blue-text {
+                    animation: none;
+                }
+                .motion-button {
+                    display: none;
+                }
             }
             @media (forced-colors: active) {
+                body::before,
+                .motion-button {
+                    display: none;
+                }
+                .animated-blue-text {
+                    background: none;
+                    color: CanvasText;
+                    animation: none;
+                }
                 .note,
                 .principle,
                 .contents a[aria-current="location"] {
@@ -774,11 +920,14 @@
                 a {
                     color: LinkText;
                 }
+                a.animated-blue-text {
+                    color: LinkText;
+                }
             }
             @media print {
                 :root,
                 :root[data-theme],
-                :root:not([data-theme="light"]) {
+                :root[data-theme="system"] {
                     color-scheme: light;
                     --page: #fff;
                     --surface: #fff;
@@ -798,6 +947,18 @@
                 }
                 body {
                     font-size: 11pt;
+                    padding-top: 0;
+                }
+                body::before {
+                    display: none;
+                }
+                .animated-blue-text {
+                    color: #111;
+                    background: none;
+                    animation: none;
+                }
+                .section-number {
+                    border-color: #444;
                 }
                 .wrap {
                     width: 100%;
@@ -876,18 +1037,64 @@
                     <div class="appearance" id="appearance-control" hidden>
                         <label for="appearance">Appearance</label>
                         <select id="appearance" aria-label="Page appearance">
+                            <option value="blue" selected>App blue</option>
                             <option value="system">System theme</option>
                             <option value="light">Light theme</option>
                             <option value="dark">Dark theme</option>
                         </select>
                     </div>
+                    <button
+                        class="motion-button"
+                        id="motion-toggle"
+                        type="button"
+                        aria-label="Pause animation"
+                        aria-pressed="false"
+                        hidden
+                    >
+                        <span class="pause-icon" aria-hidden="true"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <rect x="14" y="3" width="5" height="18" rx="1"></rect>
+                                <rect x="5" y="3" width="5" height="18" rx="1"></rect></svg
+                        ></span>
+                        <span class="play-icon" aria-hidden="true"
+                            ><svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <path
+                                    d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                                ></path></svg
+                        ></span>
+                        <span class="tooltip" aria-hidden="true">Pause animation</span>
+                    </button>
                 </nav>
             </div>
         </header>
 
         <div class="wrap page-heading">
             <p class="eyebrow">Privacy Policy &amp; Terms of Use</p>
-            <h1>LB: Universal Scanner</h1>
+            <h1 class="animated-blue-text">LB: Universal Scanner</h1>
             <p class="lede">
                 Understand what stays on your device, when information is shared, and the choices
                 you have when using the app.
@@ -2183,7 +2390,9 @@
                         Scanner
                     </p>
                     <p>
-                        <a class="contact-email" href="mailto:lbfoodscannerapp@gmail.com"
+                        <a
+                            class="contact-email animated-blue-text"
+                            href="mailto:lbfoodscannerapp@gmail.com"
                             >lbfoodscannerapp@gmail.com</a
                         >
                     </p>
@@ -2223,15 +2432,26 @@
                 const themeMeta = document.querySelector('meta[name="theme-color"]');
                 const updateTheme = () => {
                     const choice = appearance.value;
-                    if (choice === "system") root.removeAttribute("data-theme");
-                    else root.dataset.theme = choice;
+                    root.dataset.theme = choice;
                     const dark = choice === "dark" || (choice === "system" && systemDark.matches);
-                    themeMeta.content = dark ? "#151917" : "#fafbf9";
+                    themeMeta.content =
+                        choice === "blue" ? "#100873" : dark ? "#080b12" : "#f3f6ff";
                 };
                 document.getElementById("appearance-control").hidden = false;
                 appearance.addEventListener("change", updateTheme);
                 if (systemDark.addEventListener) systemDark.addEventListener("change", updateTheme);
                 updateTheme();
+
+                const motionToggle = document.getElementById("motion-toggle");
+                motionToggle.hidden = false;
+                motionToggle.addEventListener("click", () => {
+                    const paused = root.dataset.motion !== "paused";
+                    root.dataset.motion = paused ? "paused" : "running";
+                    motionToggle.setAttribute("aria-pressed", String(paused));
+                    motionToggle.querySelector(".tooltip").textContent = paused
+                        ? "Resume animation"
+                        : "Pause animation";
+                });
 
                 const sections = [...document.querySelectorAll(".policy-section")];
                 const links = [...document.querySelectorAll(".contents ol a")];
